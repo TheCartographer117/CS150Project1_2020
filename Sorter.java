@@ -5,8 +5,7 @@ import java.util.*;
  * @author (your name)
  * @version (a version number or a date)
  */
-public interface Sorter
-{
+public interface Sorter {
     /**
      * Sort an array of ints. 
      *

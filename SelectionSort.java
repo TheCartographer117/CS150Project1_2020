@@ -5,8 +5,7 @@ import java.util.*;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class SelectionSort implements Sorter
-{
+public class SelectionSort implements Sorter {
     /**
      * Sort an array of ints using selection sort. 
      *
