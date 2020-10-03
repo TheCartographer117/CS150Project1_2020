@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Write a description of class QuicksortMedian here.
  *
@@ -7,5 +7,90 @@
  */
 public class QuicksortMedian extends Quicksort
 {
-    //stuff
+    public int partition (int[] a, int fst, int lst) {
+        int middle = (fst + lst)/2;
+        if (a[middle] < a[fst]) {
+            swap(a, fst, middle);
+        }
+        if (a[lst] < a[fst]) {
+            swap(a, fst, lst);
+        }
+        if (a[lst] < a[middle]) {
+            swap(a, middle, lst);
+        }
+
+        //Place pivot at position high - 1
+        swap(a, middle, lst - 1);
+        int pivot = a[lst - 1];
+        int u = fst;
+        int d = lst;
+        do { 
+            while ((u < lst) && (pivot >= a[u]))
+                u++; 
+            while (pivot < a[d]) 
+                d--; 
+            if (u < d) 
+                swap(a, u, d);
+        } while (u < d);
+        swap(a, fst, d);
+        return d; 
+    }
+
+    public <T extends Comparable<? super T>> int partition (T[] a, int fst, int lst) {
+        int middle = (fst + lst)/2;
+        if (a[middle].compareTo(a[fst]) < 0) {
+            swap(a, fst, middle);
+        }
+        if (a[lst].compareTo(a[fst]) < 0) {
+            swap(a, fst, lst);
+        }
+        if (a[lst].compareTo(a[middle]) < 0) {
+            swap(a, middle, lst);
+        }
+        
+        //Place pivot at position high - 1
+        swap(a, middle, lst - 1);
+        T pivot = a[lst - 1];
+        int u = fst;
+        int d = lst;
+        do { 
+            while ((u < lst) && (pivot.compareTo(a[u]) >= 0)) 
+                u++; 
+            while (pivot.compareTo(a[d]) < 0) 
+                d--; 
+            if (u < d) 
+                swap(a, u, d); 
+        } while (u < d);
+        swap(a, fst, d);
+        return d; 
+    }
+
+    public <T> int partition (T[] a, int fst, int lst, Comparator<T> c) {
+        int middle = (fst + lst)/2;
+        if (c.compare(a[middle], a[fst]) < 0) {
+            swap(a, fst, middle);
+        }
+        if (c.compare(a[lst], a[fst]) < 0) {
+            swap(a, fst, lst);
+        }
+        if (c.compare(a[lst], a[middle]) < 0) {
+            swap(a, middle, lst);
+        }
+        
+        //Place pivot at position high - 1
+        swap(a, middle, lst - 1);
+        T pivot = a[lst - 1];
+        int u = fst;
+        int d = lst;
+        do { 
+            while ((u < lst) && (c.compare(pivot, a[u]) >= 0))
+                u++; 
+            while (c.compare(pivot, a[u]) < 0)
+                d--; 
+            if (u < d) 
+                swap(a, u, d); 
+        } while (u < d);
+        swap(a, fst, d);
+        return d; 
+    }
 }

@@ -27,4 +27,11 @@ public interface Sorter {
      * @param  c  a comparator object
      */ 
     public <T> void sort (T[] a, Comparator<T> c);
+    
+    /**
+     * Return the method of sorting. 
+     *
+     * @return the method of sorting
+     */ 
+    public String toString();
 }

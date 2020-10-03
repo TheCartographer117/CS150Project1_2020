@@ -7,6 +7,15 @@ import java.util.*;
  */
 public class MergeSort implements Sorter {
     /**
+     * Sort an array of ints using merge sort. Overides interface method
+     *
+     * @param   a   an array of ints
+     */
+    public void sort (int[] a) {
+        sort(a, 0, a.length - 1);
+    }
+    
+    /**
      * Sort an array of ints using merge sort. 
      *
      * @param   a   an array of ints
@@ -44,6 +53,15 @@ public class MergeSort implements Sorter {
     } 
     
     /**
+     * Sort an array of comparable objects using merge sort. Overides interface method.
+     *
+     * @param   a   an array of ints
+     */
+    public <T extends Comparable<? super T>> void sort (T[] a) {
+        sort(a, 0, a.length - 1);
+    }
+    
+    /**
      * Sort an array of comparable objects using merge sort. 
      *
      * @param   a   an array of comparable objects
@@ -78,6 +96,10 @@ public class MergeSort implements Sorter {
             else
                 a[k++] = a[j++];
         while (i < b.length) a[k++] = b[i++]; 
+    }
+    
+    public <T> void sort (T[] a, Comparator<T> c) {
+        sort(a, 0, a.length - 1, c);
     }
     
     /**
