@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=QuicksortRand
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ QuicksortRand\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=seed
+comment1.target=QuicksortRand(int)
+comment2.params=a\ fst\ lst
+comment2.target=int\ partition(int[],\ int,\ int)
+comment3.params=a\ fst\ lst
+comment3.target=int\ partition(java.lang.Comparable[],\ int,\ int)
+comment4.params=a\ fst\ lst\ c
+comment4.target=int\ partition(java.lang.Object[],\ int,\ int,\ java.util.Comparator)
+numComments=5

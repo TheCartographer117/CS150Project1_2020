@@ -1,5 +1,3 @@
-
-
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
@@ -52,7 +50,7 @@ public class MergeSortTest
             output = output + "" + intArray[i] + ",";
         }
         System.out.println("mergeIntsRand: " + output);
-        assertEquals(output, solution);
+        assertEquals(solution, output);
     }
     
     @Test
@@ -67,7 +65,7 @@ public class MergeSortTest
             output = output + "" + intArray[i] + ",";
         }
         System.out.println("mergeIntsSorted: " + output);
-        assertEquals(output, solution);
+        assertEquals(solution, output);
     }
     
     @Test
@@ -82,6 +80,51 @@ public class MergeSortTest
             output = output + "" + intArray[i] + ",";
         }
         System.out.println("mergeIntsWorst: " + output);
-        assertEquals(output, solution);
+        assertEquals(solution, output);
+    }
+    
+    @Test
+    public void testMergeStringsRand()
+    {
+        MergeSort mergeSo1 = new MergeSort();
+        String [] intArray = {"ac","ad","aa","ab","ae"};
+        mergeSo1.sort(intArray);
+        String solution = "aa,ab,ac,ad,ae,";
+        String output = new String();
+        for (int i = 0; i < intArray.length; i ++) {
+            output = output + "" + intArray[i] + ",";
+        }
+        System.out.println("mergeIntsRand: " + output);
+        assertEquals(solution, output);
+    }
+    
+    @Test
+    public void testMergeStringsSorted()
+    {
+        MergeSort mergeSo1 = new MergeSort();
+        String [] intArray = {"aa","ab","ac","ad","ae"};
+        mergeSo1.sort(intArray);
+        String solution = "aa,ab,ac,ad,ae,";
+        String output = new String();
+        for (int i = 0; i < intArray.length; i ++) {
+            output = output + "" + intArray[i] + ",";
+        }
+        System.out.println("mergeIntsSorted: " + output);
+        assertEquals(solution, output);
+    }
+    
+    @Test
+    public void testMergeStringsWorst()
+    {
+        MergeSort mergeSo1 = new MergeSort();
+        String [] intArray = {"ae","ad","ac","ab","aa"};
+        mergeSo1.sort(intArray);
+        String solution = "aa,ab,ac,ad,ae,";
+        String output = new String();
+        for (int i = 0; i < intArray.length; i ++) {
+            output = output + "" + intArray[i] + ",";
+        }
+        System.out.println("mergeIntsWorst: " + output);
+        assertEquals(solution, output);
     }
 }

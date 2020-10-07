@@ -1,5 +1,3 @@
-
-
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
@@ -52,7 +50,7 @@ public class QuicksortFirstTest
             output = output + "" + intArray[i] + ",";
         }
         System.out.println("quickFirstIntsRand: " + output);
-        assertEquals(output, solution);
+        assertEquals(solution, output);
     }
     
     @Test
@@ -67,7 +65,7 @@ public class QuicksortFirstTest
             output = output + "" + intArray[i] + ",";
         }
         System.out.println("quickFirstIntsSorted: " + output);
-        assertEquals(output, solution);
+        assertEquals(solution, output);
     }
     
     @Test
@@ -82,6 +80,51 @@ public class QuicksortFirstTest
             output = output + "" + intArray[i] + ",";
         }
         System.out.println("quickFirstIntsWorst: " + output);
-        assertEquals(output, solution);
+        assertEquals(solution, output);
+    }
+    
+    @Test
+    public void testQuickFirstStringsRand()
+    {
+        QuicksortFirst quickFi1 = new QuicksortFirst();
+        String [] intArray = {"ac","ad","aa","ab","ae"};
+        quickFi1.sort(intArray);
+        String solution = "aa,ab,ac,ad,ae,";
+        String output = new String();
+        for (int i = 0; i < intArray.length; i ++) {
+            output = output + "" + intArray[i] + ",";
+        }
+        System.out.println("quickFirstIntsRand: " + output);
+        assertEquals(solution, output);
+    }
+    
+    @Test
+    public void testQuickFirstStringsSorted()
+    {
+        QuicksortFirst quickFi1 = new QuicksortFirst();
+        String [] intArray = {"aa","ab","ac","ad","ae"};
+        quickFi1.sort(intArray);
+        String solution = "aa,ab,ac,ad,ae,";
+        String output = new String();
+        for (int i = 0; i < intArray.length; i ++) {
+            output = output + "" + intArray[i] + ",";
+        }
+        System.out.println("quickFirstIntsSorted: " + output);
+        assertEquals(solution, output);
+    }
+    
+    @Test
+    public void testQuickFirstStringsWorst()
+    {
+        QuicksortFirst quickFi1 = new QuicksortFirst();
+        String [] intArray = {"ae","ad","ac","ab","aa"};
+        quickFi1.sort(intArray);
+        String solution = "aa,ab,ac,ad,ae,";
+        String output = new String();
+        for (int i = 0; i < intArray.length; i ++) {
+            output = output + "" + intArray[i] + ",";
+        }
+        System.out.println("quickFirstIntsWorst: " + output);
+        assertEquals(solution, output);
     }
 }
