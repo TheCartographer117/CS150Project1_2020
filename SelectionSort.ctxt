@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=SelectionSort
+comment0.text=\r\n\ An\ implement\ of\ Selection\ sort\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=a
+comment1.target=void\ sort(int[])
+comment1.text=\r\n\ Sort\ an\ array\ of\ ints\ using\ selection\ sort.\ \r\n\r\n\ @param\ \ a\ \ an\ array\ of\ ints\r\n
+comment2.params=a
+comment2.target=void\ sort(java.lang.Comparable[])
+comment2.text=\r\n\ Sort\ an\ array\ using\ selection\ sort.\ \r\n\r\n\ @param\ \ a\ \ an\ array\ of\ comparable\ objects\r\n
+comment3.params=a\ c
+comment3.target=void\ sort(java.lang.Object[],\ java.util.Comparator)
+comment3.text=\r\n\ Sort\ an\ array\ using\ selection\ sort.\ \r\n\r\n\ @param\ \ a\ \ an\ array\ of\ comparable\ objects\r\n\ @param\ \ c\ \ a\ comparator\ object\r\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\r\n\ Return\ the\ method\ of\ sorting.\ \r\n\r\n\ @return\ the\ method\ of\ sorting\r\n
+numComments=5

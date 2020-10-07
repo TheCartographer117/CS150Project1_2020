@@ -85,6 +85,411 @@ public class ExperimentController
     }
     
     /**
+     * Returns the amount of time to sort an array of random integers using Insertion Sort
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeInsertionSortRandInts(int numberOfItems, int seed) {
+        InsertionSort insertionInt = new InsertionSort();
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = random.nextInt(201);
+        }
+        long startTime = System.currentTimeMillis();
+        insertionInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of sorted integers using Insertion Sort
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeInsertionSortSortedInts(int numberOfItems, int seed) {
+        InsertionSort insertionInt = new InsertionSort();
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = i;
+        }
+        long startTime = System.currentTimeMillis();
+        insertionInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of reverse sorted integers using Insertion Sort
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeInsertionSortWorstCaseInts(int numberOfItems, int seed) {
+        InsertionSort insertionInt = new InsertionSort();
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = numberOfItems - i - 1;
+        }
+        long startTime = System.currentTimeMillis();
+        insertionInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of random integers using Quick Sort
+     * with the first index as the pivot.
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeQuicksortFirstRandInts(int numberOfItems, int seed) {
+        QuicksortFirst QuicksortFirstInt = new QuicksortFirst();
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = random.nextInt(201);
+        }
+        long startTime = System.currentTimeMillis();
+        QuicksortFirstInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of sorted integers using Quick Sort
+     * with the first index as the pivot.
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeQuicksortFirstSortedInts(int numberOfItems, int seed) {
+        QuicksortFirst QuicksortFirstInt = new QuicksortFirst();
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = i;
+        }
+        long startTime = System.currentTimeMillis();
+        QuicksortFirstInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of reverse sorted integers using Quick Sort
+     * with the first index as the pivot.
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeQuicksortFirstWorstCaseInts(int numberOfItems, int seed) {
+        QuicksortFirst QuicksortFirstInt = new QuicksortFirst();
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = numberOfItems - i - 1;
+        }
+        long startTime = System.currentTimeMillis();
+        QuicksortFirstInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of random integers using Quick Sort
+     * with the median index as the pivot.
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeQuicksortMedianRandInts(int numberOfItems, int seed) {
+        QuicksortMedian QuicksortMedianInt = new QuicksortMedian();
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = random.nextInt(201);
+        }
+        long startTime = System.currentTimeMillis();
+        QuicksortMedianInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of sorted integers using Quick Sort
+     * with the median index as the pivot.
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeQuicksortMedianSortedInts(int numberOfItems, int seed) {
+        QuicksortMedian QuicksortMedianInt = new QuicksortMedian();
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = i;
+        }
+        long startTime = System.currentTimeMillis();
+        QuicksortMedianInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of reverse sorted integers using Quick Sort
+     * with the median index as the pivot.
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeQuicksortMedianWorstCaseInts(int numberOfItems, int seed) {
+        QuicksortMedian QuicksortMedianInt = new QuicksortMedian();
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = numberOfItems - i - 1;
+        }
+        long startTime = System.currentTimeMillis();
+        QuicksortMedianInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of random integers using Quick Sort
+     * with a random index as the pivot.
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeQuicksortRandRandInts(int numberOfItems, int seed) {
+        QuicksortRand QuicksortRandInt = new QuicksortRand(seed);
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = random.nextInt(201);
+        }
+        long startTime = System.currentTimeMillis();
+        QuicksortRandInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of sorted integers using Quick Sort
+     * with a random index as the pivot.
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeQuicksortRandSortedInts(int numberOfItems, int seed) {
+        QuicksortRand QuicksortRandInt = new QuicksortRand(seed);
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = i;
+        }
+        long startTime = System.currentTimeMillis();
+        QuicksortRandInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of reverse sorted integers using Quick Sort
+     * with a random index as the pivot.
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeQuicksortRandWorstCaseInts(int numberOfItems, int seed) {
+        QuicksortRand QuicksortRandInt = new QuicksortRand(seed);
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = numberOfItems - i - 1;
+        }
+        long startTime = System.currentTimeMillis();
+        QuicksortRandInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of random integers using Merge Sort.
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeMergeSortRandInts(int numberOfItems, int seed) {
+        MergeSort MergeSortInt = new MergeSort();
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = random.nextInt(201);
+        }
+        long startTime = System.currentTimeMillis();
+        MergeSortInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of sorted integers using Merge Sort.
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeMergeSortSortedInts(int numberOfItems, int seed) {
+        MergeSort MergeSortInt = new MergeSort();
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = i;
+        }
+        long startTime = System.currentTimeMillis();
+        MergeSortInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of reverse sorted integers using Merge Sort.
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeMergeSortWorstCaseInts(int numberOfItems, int seed) {
+        MergeSort MergeSortInt = new MergeSort();
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = numberOfItems - i - 1;
+        }
+        long startTime = System.currentTimeMillis();
+        MergeSortInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of random integers using Merge Sort.
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeSelectionSortRandInts(int numberOfItems, int seed) {
+        SelectionSort SelectionSortInt = new SelectionSort();
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = random.nextInt(201);
+        }
+        long startTime = System.currentTimeMillis();
+        SelectionSortInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of sorted integers using Merge Sort.
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeSelectionSortSortedInts(int numberOfItems, int seed) {
+        SelectionSort SelectionSortInt = new SelectionSort();
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = i;
+        }
+        long startTime = System.currentTimeMillis();
+        SelectionSortInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of reverse sorted integers using Merge Sort.
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeSelectionSortWorstCaseInts(int numberOfItems, int seed) {
+        SelectionSort SelectionSortInt = new SelectionSort();
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = numberOfItems - i - 1;
+        }
+        long startTime = System.currentTimeMillis();
+        SelectionSortInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
      * Runs a series of tests of sorting various types of data of various lengths. 
      * Different sorting algorithms are used during the tests. Writes the time for 
      * each test to a comma delimited file.
