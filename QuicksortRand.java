@@ -5,8 +5,7 @@ import java.util.*;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class QuicksortRand extends Quicksort
-{
+public class QuicksortRand extends Quicksort {
     int seed;
     Random random;
     
@@ -16,26 +15,10 @@ public class QuicksortRand extends Quicksort
     }
     
     public int partition (int[] a, int fst, int lst) {
-        int pivotIndex = random.nextInt(lst);
+        int pivotIndex = fst + random.nextInt(lst - fst + 1);
         swap(a, pivotIndex, fst);
         int pivot = a[fst];
         
-        /*
-        int i;
-        int j;
-        for (i = fst, j = lst - 1; ; ) {
-            while (a[++i] < pivot);
-            while(pivot < a[--j]);
-            if (i >= j) {
-                break;
-            }
-            swap(a, i , j);
-        }
-
-        swap(a, i , lst - 1);
-        return i; //*/
-        
-        ///*
         int u = fst;
         int d = lst;
         do { 
@@ -47,13 +30,12 @@ public class QuicksortRand extends Quicksort
                 swap(a, u, d);
         } while (u < d);
         swap(a, fst, d);
-        return d; //*/
+        return d;
     }
     
     
     public <T extends Comparable<? super T>> int partition (T[] a, int fst, int lst) {
-        //T pivot = a[random.nextInt(lst)];
-        int pivotIndex = random.nextInt(lst);
+        int pivotIndex = fst + random.nextInt(lst - fst + 1);
         swap(a, pivotIndex, fst);
         T pivot = a[fst];
         
@@ -72,7 +54,10 @@ public class QuicksortRand extends Quicksort
     }
     
     public <T> int partition (T[] a, int fst, int lst, Comparator<T> c) {
-        T pivot = a[random.nextInt(lst)];
+        int pivotIndex = fst + random.nextInt(lst - fst + 1);
+        swap(a, pivotIndex, fst);
+        T pivot = a[fst];
+        
         int u = fst;
         int d = lst;
         do { 
