@@ -87,14 +87,14 @@ public class QuicksortMedianTest
     public void testQuickMedianStringsRand()
     {
         QuicksortMedian quickMe1 = new QuicksortMedian();
-        String [] intArray = {"ac","ad","aa","ab","ae"};
-        quickMe1.sort(intArray);
+        String [] stringArray = {"ac","ad","aa","ab","ae"};
+        quickMe1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("quickMedianIntsRand: " + output);
+        System.out.println("quickMedianStringsRand: " + output);
         assertEquals(solution, output);
     }
     
@@ -102,14 +102,14 @@ public class QuicksortMedianTest
     public void testQuickMedianStringsSorted()
     {
         QuicksortMedian quickMe1 = new QuicksortMedian();
-        String [] intArray = {"aa","ab","ac","ad","ae"};
-        quickMe1.sort(intArray);
+        String [] stringArray = {"aa","ab","ac","ad","ae"};
+        quickMe1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("quickMedianIntsSorted: " + output);
+        System.out.println("quickMedianStringsSorted: " + output);
         assertEquals(solution, output);
     }
     
@@ -117,14 +117,14 @@ public class QuicksortMedianTest
     public void testQuickMedianStringsWorst()
     {
         QuicksortMedian quickMe1 = new QuicksortMedian();
-        String [] intArray = {"ae","ad","ac","ab","aa"};
-        quickMe1.sort(intArray);
+        String [] stringArray = {"ae","ad","ac","ab","aa"};
+        quickMe1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("quickMedianIntsWorst: " + output);
+        System.out.println("quickMedianStringsWorst: " + output);
         assertEquals(solution, output);
     }
 }

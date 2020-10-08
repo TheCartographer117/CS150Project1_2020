@@ -22,18 +22,33 @@ public class QuicksortMedian extends Quicksort
         //Place pivot at position high - 1
         swap(a, middle, lst - 1);
         int pivot = a[lst - 1];
+
+        int i;
+        int j;
+        for (i = fst, j = lst - 1; ; ) {
+            while (a[++i] < pivot);
+            while(pivot < a[--j]);
+            if (i >= j) {
+                break;
+            }
+            swap(a, i , j);
+        }
+
+        swap(a, i , lst - 1);
+        return i;
+        /*
         int u = fst;
         int d = lst;
         do { 
-            while ((u < lst) && (pivot >= a[u]))
-                u++; 
-            while (pivot < a[d]) 
-                d--; 
-            if (u < d) 
-                swap(a, u, d);
+        while ((u < lst) && (pivot >= a[u]))
+        u++; 
+        while (pivot < a[d]) 
+        d--; 
+        if (u < d) 
+        swap(a, u, d);
         } while (u < d);
         swap(a, fst, d);
-        return d; 
+        return d; */
     }
 
     public <T extends Comparable<? super T>> int partition (T[] a, int fst, int lst) {
@@ -47,22 +62,37 @@ public class QuicksortMedian extends Quicksort
         if (a[lst].compareTo(a[middle]) < 0) {
             swap(a, middle, lst);
         }
-        
+
         //Place pivot at position high - 1
         swap(a, middle, lst - 1);
         T pivot = a[lst - 1];
+
+        int i;
+        int j;
+        for (i = fst, j = lst - 1; ; ) {
+            while (a[++i].compareTo(pivot) < 0);
+            while(pivot.compareTo(a[--j]) < 0);
+            if (i >= j) {
+                break;
+            }
+            swap(a, i , j);
+        }
+
+        swap(a, i , lst - 1); //Restore pivot
+        return i;
+        /*
         int u = fst;
         int d = lst;
         do { 
-            while ((u < lst) && (pivot.compareTo(a[u]) >= 0)) 
-                u++; 
-            while (pivot.compareTo(a[d]) < 0) 
-                d--; 
-            if (u < d) 
-                swap(a, u, d); 
+        while ((u < lst) && (pivot.compareTo(a[u]) >= 0)) 
+        u++; 
+        while (pivot.compareTo(a[d]) < 0) 
+        d--; 
+        if (u < d) 
+        swap(a, u, d); 
         } while (u < d);
         swap(a, fst, d);
-        return d; 
+        return d; */
     }
 
     public <T> int partition (T[] a, int fst, int lst, Comparator<T> c) {
@@ -76,7 +106,7 @@ public class QuicksortMedian extends Quicksort
         if (c.compare(a[lst], a[middle]) < 0) {
             swap(a, middle, lst);
         }
-        
+
         //Place pivot at position high - 1
         swap(a, middle, lst - 1);
         T pivot = a[lst - 1];

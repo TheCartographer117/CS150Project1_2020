@@ -87,14 +87,14 @@ public class SelectionSortTest
     public void testSelectionStringsRand()
     {
         SelectionSort selectionSo1 = new SelectionSort();
-        String [] intArray = {"ac","ad","aa","ab","ae"};
-        selectionSo1.sort(intArray);
+        String [] stringArray = {"ac","ad","aa","ab","ae"};
+        selectionSo1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("selectionIntsRand: " + output);
+        System.out.println("selectionStringsRand: " + output);
         assertEquals(solution, output);
     }
     
@@ -102,14 +102,14 @@ public class SelectionSortTest
     public void testSelectionStringsSorted()
     {
         SelectionSort selectionSo1 = new SelectionSort();
-        String [] intArray = {"aa","ab","ac","ad","ae"};
-        selectionSo1.sort(intArray);
+        String [] stringArray = {"aa","ab","ac","ad","ae"};
+        selectionSo1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("selectionIntsSorted: " + output);
+        System.out.println("selectionStringsSorted: " + output);
         assertEquals(solution, output);
     }
     
@@ -117,14 +117,14 @@ public class SelectionSortTest
     public void testSelectionStringsWorst()
     {
         SelectionSort selectionSo1 = new SelectionSort();
-        String [] intArray = {"ae","ad","ac","ab","aa"};
-        selectionSo1.sort(intArray);
+        String [] stringArray = {"ae","ad","ac","ab","aa"};
+        selectionSo1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("selectionIntsWorst: " + output);
+        System.out.println("selectionStringsWorst: " + output);
         assertEquals(solution, output);
     }
 }

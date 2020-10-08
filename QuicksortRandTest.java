@@ -88,14 +88,14 @@ public class QuicksortRandTest
     public void testQuickRandStringsRand()
     {
         QuicksortRand quickRa1 = new QuicksortRand(2100);
-        String [] intArray = {"ac","ad","aa","ab","ae"};
-        quickRa1.sort(intArray);
+        String [] stringArray = {"ac","ad","aa","ab","ae"};
+        quickRa1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("quickRandIntsRand: " + output);
+        System.out.println("quickRandStringsRand: " + output);
         assertEquals(solution, output);
     }
     
@@ -103,14 +103,14 @@ public class QuicksortRandTest
     public void testQuickRandStringsSorted()
     {
         QuicksortRand quickRa1 = new QuicksortRand(2100);
-        String [] intArray = {"aa","ab","ac","ad","ae"};
-        quickRa1.sort(intArray);
+        String [] stringArray = {"aa","ab","ac","ad","ae"};
+        quickRa1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("quickRandIntsSorted: " + output);
+        System.out.println("quickRandStringsSorted: " + output);
         assertEquals(solution, output);
     }
     
@@ -118,14 +118,14 @@ public class QuicksortRandTest
     public void testQuickRandStringsWorst()
     {
         QuicksortRand quickRa1 = new QuicksortRand(2100);
-        String [] intArray = {"ae","ad","ac","ab","aa"};
-        quickRa1.sort(intArray);
+        String [] stringArray = {"ae","ad","ac","ab","aa"};
+        quickRa1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("quickRandIntsWorst: " + output);
+        System.out.println("quickRandStringsWorst: " + output);
         assertEquals(solution, output);
     }
 }

@@ -87,14 +87,14 @@ public class BubbleSortTest
     public void testBubbleStringsRand()
     {
         BubbleSort bubbleSo1 = new BubbleSort();
-        String [] intArray = {"ac","ad","aa","ab","ae"};
-        bubbleSo1.sort(intArray);
+        String [] stringArray = {"ac","ad","aa","ab","ae"};
+        bubbleSo1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("bubbleIntsRand: " + output);
+        System.out.println("bubbleStringsRand: " + output);
         assertEquals(solution, output);
     }
     
@@ -102,14 +102,14 @@ public class BubbleSortTest
     public void testBubbleStringsSorted()
     {
         BubbleSort bubbleSo1 = new BubbleSort();
-        String [] intArray = {"aa","ab","ac","ad","ae"};
-        bubbleSo1.sort(intArray);
+        String [] stringArray = {"aa","ab","ac","ad","ae"};
+        bubbleSo1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("bubbleIntsSorted: " + output);
+        System.out.println("bubbleStringsSorted: " + output);
         assertEquals(solution, output);
     }
     
@@ -117,14 +117,14 @@ public class BubbleSortTest
     public void testBubbleStringsWorst()
     {
         BubbleSort bubbleSo1 = new BubbleSort();
-        String [] intArray = {"ae","ad","ac","ab","aa"};
-        bubbleSo1.sort(intArray);
+        String [] stringArray = {"ae","ad","ac","ab","aa"};
+        bubbleSo1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("bubbleIntsWorst: " + output);
+        System.out.println("bubbleStringsWorst: " + output);
         assertEquals(solution, output);
     }
 }

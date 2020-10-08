@@ -6,6 +6,7 @@ import java.util.*;
  * @version (a version number or a date)
  */
 public abstract class Quicksort implements Sorter {
+    
     /**
      * Sort an array of ints using quick sort. Overides interface method
      *
@@ -16,11 +17,40 @@ public abstract class Quicksort implements Sorter {
     }
     
     
-    private void qSort (int[] a, int fst, int lst) { 
+    private void qSort (int[] a, int fst, int lst) {
+        ///*
+        if (fst + 2 > lst) {
+            insertionSort(a, fst, lst);
+        } else {
+            int pivIndex = partition(a, fst, lst);
+            qSort(a, fst, pivIndex-1);
+            qSort(a, pivIndex+1, lst); 
+        }
+        //*/
+        /*
         if (fst < lst) {
             int pivIndex = partition(a, fst, lst);
             qSort(a, fst, pivIndex-1);
             qSort(a, pivIndex+1, lst); 
+        } */
+    }
+    
+    /**
+     * Internal insertion sort routine for subarrays that is used by quicksort.
+     * 
+     * @param   a   an array of Comparable items.
+     * @param   low the left-most index of the subarray.
+     * @param   n   the number of items to sort.
+     */
+    private static void insertionSort(int[] a, int low, int high ) {
+        for( int p = low + 1; p <= high; p++ ) {
+            int tmp = a[p];
+            int j;
+
+            for(j = p; j > low && tmp < a[j-1]; j-- ) {
+                a[j] = a[j-1];
+            }
+            a[j] = tmp;
         }
     }
     
@@ -33,14 +63,41 @@ public abstract class Quicksort implements Sorter {
     } 
 
     private <T extends Comparable<? super T>> void qSort (T[] a, int fst, int lst) { 
-        if (fst < lst) {
+        if (fst + 2 > lst) {
+            insertionSort(a, fst, lst);
+        } else {
             int pivIndex = partition(a, fst, lst);
             qSort(a, fst, pivIndex-1);
             qSort(a, pivIndex+1, lst); 
         }
+        /*
+        if (fst < lst) {
+            int pivIndex = partition(a, fst, lst);
+            qSort(a, fst, pivIndex-1);
+            qSort(a, pivIndex+1, lst); 
+        } */
     }
 
     abstract <T extends Comparable<? super T>> int partition (T[] a, int fst, int lst);
+    
+    /**
+     * Internal insertion sort routine for subarrays that is used by quicksort.
+     * 
+     * @param   a   an array of Comparable items.
+     * @param   low the left-most index of the subarray.
+     * @param   n   the number of items to sort.
+     */
+    private static <T extends Comparable> void insertionSort(T[] a, int low, int high ) {
+        for( int p = low + 1; p <= high; p++ ) {
+            T tmp = a[p];
+            int j;
+
+            for(j = p; j > low && tmp.compareTo(a[j-1]) < 0; j-- ) {
+                a[j] = a[j-1];
+            }
+            a[j] = tmp;
+        }
+    }
     
     ////
     

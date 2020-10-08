@@ -87,14 +87,14 @@ public class InsertionSortTest
     public void testInsertionStringsRand()
     {
         InsertionSort insertionSo1 = new InsertionSort();
-        String [] intArray = {"ac","ad","aa","ab","ae"};
-        insertionSo1.sort(intArray);
+        String [] stringArray = {"ac","ad","aa","ab","ae"};
+        insertionSo1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("insertionIntsRand: " + output);
+        System.out.println("insertionStringsRand: " + output);
         assertEquals(solution, output);
     }
     
@@ -102,14 +102,14 @@ public class InsertionSortTest
     public void testInsertionStringsSorted()
     {
         InsertionSort insertionSo1 = new InsertionSort();
-        String [] intArray = {"aa","ab","ac","ad","ae"};
-        insertionSo1.sort(intArray);
+        String [] stringArray = {"aa","ab","ac","ad","ae"};
+        insertionSo1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("insertionIntsSorted: " + output);
+        System.out.println("insertionStringsSorted: " + output);
         assertEquals(solution, output);
     }
     
@@ -117,14 +117,14 @@ public class InsertionSortTest
     public void testInsertionStringsWorst()
     {
         InsertionSort insertionSo1 = new InsertionSort();
-        String [] intArray = {"ae","ad","ac","ab","aa"};
-        insertionSo1.sort(intArray);
+        String [] stringArray = {"ae","ad","ac","ab","aa"};
+        insertionSo1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("insertionIntsWorst: " + output);
+        System.out.println("insertionStringsWorst: " + output);
         assertEquals(solution, output);
     }
 }

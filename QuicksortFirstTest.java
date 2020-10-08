@@ -87,14 +87,14 @@ public class QuicksortFirstTest
     public void testQuickFirstStringsRand()
     {
         QuicksortFirst quickFi1 = new QuicksortFirst();
-        String [] intArray = {"ac","ad","aa","ab","ae"};
-        quickFi1.sort(intArray);
+        String [] stringArray = {"ac","ad","aa","ab","ae"};
+        quickFi1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("quickFirstIntsRand: " + output);
+        System.out.println("quickFirstStringsRand: " + output);
         assertEquals(solution, output);
     }
     
@@ -102,14 +102,14 @@ public class QuicksortFirstTest
     public void testQuickFirstStringsSorted()
     {
         QuicksortFirst quickFi1 = new QuicksortFirst();
-        String [] intArray = {"aa","ab","ac","ad","ae"};
-        quickFi1.sort(intArray);
+        String [] stringArray = {"aa","ab","ac","ad","ae"};
+        quickFi1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("quickFirstIntsSorted: " + output);
+        System.out.println("quickFirstStringsSorted: " + output);
         assertEquals(solution, output);
     }
     
@@ -117,14 +117,14 @@ public class QuicksortFirstTest
     public void testQuickFirstStringsWorst()
     {
         QuicksortFirst quickFi1 = new QuicksortFirst();
-        String [] intArray = {"ae","ad","ac","ab","aa"};
-        quickFi1.sort(intArray);
+        String [] stringArray = {"ae","ad","ac","ab","aa"};
+        quickFi1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("quickFirstIntsWorst: " + output);
+        System.out.println("quickFirstStringsWorst: " + output);
         assertEquals(solution, output);
     }
 }

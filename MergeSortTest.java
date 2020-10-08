@@ -87,14 +87,14 @@ public class MergeSortTest
     public void testMergeStringsRand()
     {
         MergeSort mergeSo1 = new MergeSort();
-        String [] intArray = {"ac","ad","aa","ab","ae"};
-        mergeSo1.sort(intArray);
+        String [] stringArray = {"ac","ad","aa","ab","ae"};
+        mergeSo1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("mergeIntsRand: " + output);
+        System.out.println("mergeStringsRand: " + output);
         assertEquals(solution, output);
     }
     
@@ -102,14 +102,14 @@ public class MergeSortTest
     public void testMergeStringsSorted()
     {
         MergeSort mergeSo1 = new MergeSort();
-        String [] intArray = {"aa","ab","ac","ad","ae"};
-        mergeSo1.sort(intArray);
+        String [] stringArray = {"aa","ab","ac","ad","ae"};
+        mergeSo1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("mergeIntsSorted: " + output);
+        System.out.println("mergeStringsSorted: " + output);
         assertEquals(solution, output);
     }
     
@@ -117,14 +117,14 @@ public class MergeSortTest
     public void testMergeStringsWorst()
     {
         MergeSort mergeSo1 = new MergeSort();
-        String [] intArray = {"ae","ad","ac","ab","aa"};
-        mergeSo1.sort(intArray);
+        String [] stringArray = {"ae","ad","ac","ab","aa"};
+        mergeSo1.sort(stringArray);
         String solution = "aa,ab,ac,ad,ae,";
         String output = new String();
-        for (int i = 0; i < intArray.length; i ++) {
-            output = output + "" + intArray[i] + ",";
+        for (int i = 0; i < stringArray.length; i ++) {
+            output = output + "" + stringArray[i] + ",";
         }
-        System.out.println("mergeIntsWorst: " + output);
+        System.out.println("mergeStringsWorst: " + output);
         assertEquals(solution, output);
     }
 }
