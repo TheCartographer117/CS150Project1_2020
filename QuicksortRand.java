@@ -16,7 +16,23 @@ public class QuicksortRand extends Quicksort
     }
     
     public int partition (int[] a, int fst, int lst) {
-        int pivot = a[random.nextInt(a.length)];
+        int pivot = a[random.nextInt(lst+1)];
+        
+        /*
+        int i;
+        int j;
+        for (i = fst, j = lst - 1; ; ) {
+            while (a[++i] < pivot);
+            while(pivot < a[--j]);
+            if (i >= j) {
+                break;
+            }
+            swap(a, i , j);
+        }
+
+        swap(a, i , lst - 1);
+        return i; */
+        
         int u = fst;
         int d = lst;
         do { 
@@ -28,12 +44,12 @@ public class QuicksortRand extends Quicksort
                 swap(a, u, d);
         } while (u < d);
         swap(a, fst, d);
-        return d; 
+        return d;
     }
     
     
     public <T extends Comparable<? super T>> int partition (T[] a, int fst, int lst) {
-        T pivot = a[random.nextInt(a.length)];
+        T pivot = a[random.nextInt(lst)];
         int u = fst;
         int d = lst;
         do { 
@@ -49,7 +65,7 @@ public class QuicksortRand extends Quicksort
     }
     
     public <T> int partition (T[] a, int fst, int lst, Comparator<T> c) {
-        T pivot = a[random.nextInt(a.length)];
+        T pivot = a[random.nextInt(lst)];
         int u = fst;
         int d = lst;
         do { 
