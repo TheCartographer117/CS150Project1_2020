@@ -1,4 +1,4 @@
-//ahaha
+
 import java.util.*;
 import java.io.FileWriter;
 /**
@@ -9,6 +9,8 @@ import java.io.FileWriter;
  */
 public class ExperimentController
 {
+    String[] sortedStrings = {"aa","ab","ac","ad","ae","af","ag","ah","ai","aj","ak","al","am","an","ao","ap","aq","ar","as","at","au","av","aw","ax","ay"};
+
     /**
      * Creates an instance of this class and runs a series of tests for...
      *
@@ -86,6 +88,91 @@ public class ExperimentController
     }
     
     /**
+     * Returns the amount of time to sort an array of random strings using Bubble Sort
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeBubbleSortRandStrings(int numberOfItems, int seed) {
+        BubbleSort bubbleString = new BubbleSort();
+        Random random = new Random(seed);
+        String [] stringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            int idx = random.nextInt(sortedStrings.length);
+            stringArray[i] = sortedStrings[idx];
+        }
+        long startTime = System.currentTimeMillis();
+        bubbleString.sort(stringArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of sorted strings using Bubble Sort
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeBubbleSortSortedStrings(int numberOfItems, int seed) {
+        BubbleSort bubbleString = new BubbleSort();
+        Random random = new Random(seed);
+        String [] StringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[0];
+            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[1];
+            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[2];
+            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[3];
+            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[4];
+            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[5];
+            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[6];
+            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[7];
+            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[8];
+            else StringArray[i]=sortedStrings[9];
+        }
+        long startTime = System.currentTimeMillis();
+        bubbleString.sort(StringArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of reverse sorted strings using Bubble Sort
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeBubbleSortWorstCaseStrings(int numberOfItems, int seed) {
+        BubbleSort bubbleString = new BubbleSort();
+        Random random = new Random(seed);
+        String [] StringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[9];
+            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[8];
+            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[7];
+            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[6];
+            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[5];
+            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[4];
+            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[3];
+            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[2];
+            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[1];
+            else StringArray[i]=sortedStrings[0];
+        }
+        long startTime = System.currentTimeMillis();
+        bubbleString.sort(StringArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
      * Returns the amount of time to sort an array of random integers using Insertion Sort
      * The randomness is controlled by the seed.
      *
@@ -152,6 +239,91 @@ public class ExperimentController
     }
     
     /**
+     * Returns the amount of time to sort an array of random strings using Insertion Sort
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeInsertionSortRandStrings(int numberOfItems, int seed) {
+        InsertionSort insertionString = new InsertionSort();
+        Random random = new Random(seed);
+        String [] stringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            int idx = random.nextInt(sortedStrings.length);
+            stringArray[i] = sortedStrings[idx];
+        }
+        long startTime = System.currentTimeMillis();
+        insertionString.sort(stringArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of sorted strings using Insertion Sort
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeInsertionSortSortedStrings(int numberOfItems, int seed) {
+        InsertionSort insertionString = new InsertionSort();
+        Random random = new Random(seed);
+        String [] StringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[0];
+            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[1];
+            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[2];
+            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[3];
+            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[4];
+            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[5];
+            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[6];
+            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[7];
+            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[8];
+            else StringArray[i]=sortedStrings[9];
+        }
+        long startTime = System.currentTimeMillis();
+        insertionString.sort(StringArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of reverse sorted strings using Insertion Sort
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeInsertionSortWorstCaseStrings(int numberOfItems, int seed) {
+        InsertionSort insertionString = new InsertionSort();
+        Random random = new Random(seed);
+        String [] StringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[9];
+            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[8];
+            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[7];
+            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[6];
+            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[5];
+            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[4];
+            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[3];
+            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[2];
+            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[1];
+            else StringArray[i]=sortedStrings[0];
+        }
+        long startTime = System.currentTimeMillis();
+        insertionString.sort(StringArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
      * Returns the amount of time to sort an array of random integers using Quick Sort
      * with the first index as the pivot.
      * The randomness is controlled by the seed.
@@ -161,14 +333,14 @@ public class ExperimentController
      * @return  length of time to append all items
      */
     public long timeQuicksortFirstRandInts(int numberOfItems, int seed) {
-        QuicksortFirst QuicksortFirstInt = new QuicksortFirst();
+        QuicksortFirst quicksortFirstInt = new QuicksortFirst();
         Random random = new Random(seed);
         int [] intArray = new int [numberOfItems];
         for (int i = 0; i < numberOfItems; i++) {
             intArray[i] = random.nextInt(201);
         }
         long startTime = System.currentTimeMillis();
-        QuicksortFirstInt.sort(intArray);
+        quicksortFirstInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -184,14 +356,14 @@ public class ExperimentController
      * @return  length of time to append all items
      */
     public long timeQuicksortFirstSortedInts(int numberOfItems, int seed) {
-        QuicksortFirst QuicksortFirstInt = new QuicksortFirst();
+        QuicksortFirst quicksortFirstInt = new QuicksortFirst();
         Random random = new Random(seed);
         int [] intArray = new int [numberOfItems];
         for (int i = 0; i < numberOfItems; i++) {
             intArray[i] = i;
         }
         long startTime = System.currentTimeMillis();
-        QuicksortFirstInt.sort(intArray);
+        quicksortFirstInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -207,14 +379,101 @@ public class ExperimentController
      * @return  length of time to append all items
      */
     public long timeQuicksortFirstWorstCaseInts(int numberOfItems, int seed) {
-        QuicksortFirst QuicksortFirstInt = new QuicksortFirst();
+        QuicksortFirst quicksortFirstInt = new QuicksortFirst();
         Random random = new Random(seed);
         int [] intArray = new int [numberOfItems];
         for (int i = 0; i < numberOfItems; i++) {
             intArray[i] = numberOfItems - i - 1;
         }
         long startTime = System.currentTimeMillis();
-        QuicksortFirstInt.sort(intArray);
+        quicksortFirstInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of random strings using 
+     * Quicksort with the first index as the pivot
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeQuicksortFirstRandStrings(int numberOfItems, int seed) {
+        QuicksortFirst quicksortFirstString = new QuicksortFirst();
+        Random random = new Random(seed);
+        String [] stringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            int idx = random.nextInt(sortedStrings.length);
+            stringArray[i] = sortedStrings[idx];
+        }
+        long startTime = System.currentTimeMillis();
+        quicksortFirstString.sort(stringArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of sorted strings using  
+     * Quicksort with the first index as the pivot
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeQuicksortFirstSortedStrings(int numberOfItems, int seed) {
+        QuicksortFirst quicksortFirstString = new QuicksortFirst();
+        Random random = new Random(seed);
+        String [] StringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[0];
+            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[1];
+            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[2];
+            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[3];
+            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[4];
+            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[5];
+            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[6];
+            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[7];
+            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[8];
+            else StringArray[i]=sortedStrings[9];
+        }
+        long startTime = System.currentTimeMillis();
+        quicksortFirstString.sort(StringArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of reverse sorted strings using 
+     * Quicksort with the first index as the pivot
+     * 
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeQuicksortFirstWorstCaseStrings(int numberOfItems, int seed) {
+        QuicksortFirst quicksortFirstString = new QuicksortFirst();
+        Random random = new Random(seed);
+        String [] StringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[9];
+            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[8];
+            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[7];
+            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[6];
+            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[5];
+            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[4];
+            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[3];
+            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[2];
+            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[1];
+            else StringArray[i]=sortedStrings[0];
+        }
+        long startTime = System.currentTimeMillis();
+        quicksortFirstString.sort(StringArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -276,14 +535,101 @@ public class ExperimentController
      * @return  length of time to append all items
      */
     public long timeQuicksortMedianWorstCaseInts(int numberOfItems, int seed) {
-        QuicksortMedian QuicksortMedianInt = new QuicksortMedian();
+        QuicksortMedian quicksortMedianInt = new QuicksortMedian();
         Random random = new Random(seed);
         int [] intArray = new int [numberOfItems];
         for (int i = 0; i < numberOfItems; i++) {
             intArray[i] = numberOfItems - i - 1;
         }
         long startTime = System.currentTimeMillis();
-        QuicksortMedianInt.sort(intArray);
+        quicksortMedianInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of random strings using 
+     * Quicksort with the median index as the pivot
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeQuicksortMedianRandStrings(int numberOfItems, int seed) {
+        QuicksortMedian quicksortMedianString = new QuicksortMedian();
+        Random random = new Random(seed);
+        String [] stringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            int idx = random.nextInt(sortedStrings.length);
+            stringArray[i] = sortedStrings[idx];
+        }
+        long startTime = System.currentTimeMillis();
+        quicksortMedianString.sort(stringArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of sorted strings using  
+     * Quicksort with the median index as the pivot
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeQuicksortMedianSortedStrings(int numberOfItems, int seed) {
+        QuicksortMedian quicksortMedianString = new QuicksortMedian();
+        Random random = new Random(seed);
+        String [] StringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[0];
+            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[1];
+            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[2];
+            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[3];
+            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[4];
+            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[5];
+            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[6];
+            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[7];
+            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[8];
+            else StringArray[i]=sortedStrings[9];
+        }
+        long startTime = System.currentTimeMillis();
+        quicksortMedianString.sort(StringArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of reverse sorted strings using 
+     * Quicksort with the median index as the pivot
+     * 
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeQuicksortMedianWorstCaseStrings(int numberOfItems, int seed) {
+        QuicksortMedian quicksortMedianString = new QuicksortMedian();
+        Random random = new Random(seed);
+        String [] StringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[9];
+            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[8];
+            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[7];
+            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[6];
+            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[5];
+            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[4];
+            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[3];
+            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[2];
+            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[1];
+            else StringArray[i]=sortedStrings[0];
+        }
+        long startTime = System.currentTimeMillis();
+        quicksortMedianString.sort(StringArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -299,14 +645,14 @@ public class ExperimentController
      * @return  length of time to append all items
      */
     public long timeQuicksortRandRandInts(int numberOfItems, int seed) {
-        QuicksortRand QuicksortRandInt = new QuicksortRand(seed);
+        QuicksortRand quicksortRandInt = new QuicksortRand(seed);
         Random random = new Random(seed);
         int [] intArray = new int [numberOfItems];
         for (int i = 0; i < numberOfItems; i++) {
             intArray[i] = random.nextInt(201);
         }
         long startTime = System.currentTimeMillis();
-        QuicksortRandInt.sort(intArray);
+        quicksortRandInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -322,14 +668,14 @@ public class ExperimentController
      * @return  length of time to append all items
      */
     public long timeQuicksortRandSortedInts(int numberOfItems, int seed) {
-        QuicksortRand QuicksortRandInt = new QuicksortRand(seed);
+        QuicksortRand quicksortRandInt = new QuicksortRand(seed);
         Random random = new Random(seed);
         int [] intArray = new int [numberOfItems];
         for (int i = 0; i < numberOfItems; i++) {
             intArray[i] = i;
         }
         long startTime = System.currentTimeMillis();
-        QuicksortRandInt.sort(intArray);
+        quicksortRandInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -345,14 +691,101 @@ public class ExperimentController
      * @return  length of time to append all items
      */
     public long timeQuicksortRandWorstCaseInts(int numberOfItems, int seed) {
-        QuicksortRand QuicksortRandInt = new QuicksortRand(seed);
+        QuicksortRand quicksortRandInt = new QuicksortRand(seed);
         Random random = new Random(seed);
         int [] intArray = new int [numberOfItems];
         for (int i = 0; i < numberOfItems; i++) {
             intArray[i] = numberOfItems - i - 1;
         }
         long startTime = System.currentTimeMillis();
-        QuicksortRandInt.sort(intArray);
+        quicksortRandInt.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of random strings using 
+     * Quicksort with a random index as the pivot
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeQuicksortRandRandStrings(int numberOfItems, int seed) {
+        QuicksortRand quicksortRandString = new QuicksortRand(seed);
+        Random random = new Random(seed);
+        String [] stringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            int idx = random.nextInt(sortedStrings.length);
+            stringArray[i] = sortedStrings[idx];
+        }
+        long startTime = System.currentTimeMillis();
+        quicksortRandString.sort(stringArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of sorted strings using  
+     * Quicksort with a random index as the pivot
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeQuicksortRandSortedStrings(int numberOfItems, int seed) {
+        QuicksortRand quicksortRandString = new QuicksortRand(seed);
+        Random random = new Random(seed);
+        String [] StringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[0];
+            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[1];
+            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[2];
+            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[3];
+            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[4];
+            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[5];
+            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[6];
+            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[7];
+            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[8];
+            else StringArray[i]=sortedStrings[9];
+        }
+        long startTime = System.currentTimeMillis();
+        quicksortRandString.sort(StringArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of reverse sorted strings using 
+     * Quicksort with a random index as the pivot
+     * 
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeQuicksortRandWorstCaseStrings(int numberOfItems, int seed) {
+        QuicksortRand quicksortRandString = new QuicksortRand(seed);
+        Random random = new Random(seed);
+        String [] StringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[9];
+            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[8];
+            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[7];
+            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[6];
+            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[5];
+            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[4];
+            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[3];
+            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[2];
+            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[1];
+            else StringArray[i]=sortedStrings[0];
+        }
+        long startTime = System.currentTimeMillis();
+        quicksortRandString.sort(StringArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -367,19 +800,19 @@ public class ExperimentController
      * @return  length of time to append all items
      */
     public long timeMergeSortRandInts(int numberOfItems, int seed) {
-        MergeSort MergeSortInt = new MergeSort();
+        MergeSort mergeSortInt = new MergeSort();
         Random random = new Random(seed);
         int [] intArray = new int [numberOfItems];
         for (int i = 0; i < numberOfItems; i++) {
             intArray[i] = random.nextInt(201);
         }
         long startTime = System.currentTimeMillis();
-        MergeSortInt.sort(intArray);
+        mergeSortInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
     }
-    
+
     /**
      * Returns the amount of time to sort an array of sorted integers using Merge Sort.
      * The randomness is controlled by the seed.
@@ -401,7 +834,7 @@ public class ExperimentController
         long runTime = stopTime - startTime;
         return runTime;
     }
-    
+
     /**
      * Returns the amount of time to sort an array of reverse sorted integers using Merge Sort.
      * The randomness is controlled by the seed.
@@ -425,6 +858,90 @@ public class ExperimentController
     }
     
     /**
+     * Returns the amount of time to sort an array of random strings using Merge Sort
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeMergeSortRandStrings(int numberOfItems, int seed) {
+        MergeSort mergeSortString = new MergeSort();
+        Random random = new Random(seed);
+        String [] stringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            int idx = random.nextInt(sortedStrings.length);
+            stringArray[i] = sortedStrings[idx];
+        }
+        long startTime = System.currentTimeMillis();
+        mergeSortString.sort(stringArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of sorted strings using Merge Sort
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeMergeSortSortedStrings(int numberOfItems, int seed) {
+        MergeSort mergeSortString = new MergeSort();
+        Random random = new Random(seed);
+        String [] StringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[0];
+            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[1];
+            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[2];
+            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[3];
+            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[4];
+            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[5];
+            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[6];
+            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[7];
+            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[8];
+            else StringArray[i]=sortedStrings[9];
+        }
+        long startTime = System.currentTimeMillis();
+        mergeSortString.sort(StringArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of reverse sorted strings using Merge Sort
+     * 
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeMergeSortWorstCaseStrings(int numberOfItems, int seed) {
+        MergeSort mergeSortString = new MergeSort();
+        Random random = new Random(seed);
+        String [] StringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[9];
+            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[8];
+            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[7];
+            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[6];
+            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[5];
+            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[4];
+            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[3];
+            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[2];
+            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[1];
+            else StringArray[i]=sortedStrings[0];
+        }
+        long startTime = System.currentTimeMillis();
+        mergeSortString.sort(StringArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+
+    /**
      * Returns the amount of time to sort an array of random integers using Merge Sort.
      * The randomness is controlled by the seed.
      *
@@ -445,7 +962,7 @@ public class ExperimentController
         long runTime = stopTime - startTime;
         return runTime;
     }
-    
+
     /**
      * Returns the amount of time to sort an array of sorted integers using Merge Sort.
      * The randomness is controlled by the seed.
@@ -467,7 +984,7 @@ public class ExperimentController
         long runTime = stopTime - startTime;
         return runTime;
     }
-    
+
     /**
      * Returns the amount of time to sort an array of reverse sorted integers using Merge Sort.
      * The randomness is controlled by the seed.
@@ -490,6 +1007,90 @@ public class ExperimentController
         return runTime;
     }
     
+    /**
+     * Returns the amount of time to sort an array of random strings using Selection Sort
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeSelectionSortRandStrings(int numberOfItems, int seed) {
+        SelectionSort selectionSortString = new SelectionSort();
+        Random random = new Random(seed);
+        String [] stringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            int idx = random.nextInt(sortedStrings.length);
+            stringArray[i] = sortedStrings[idx];
+        }
+        long startTime = System.currentTimeMillis();
+        selectionSortString.sort(stringArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of sorted strings using Selection Sort
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeSelectionSortSortedStrings(int numberOfItems, int seed) {
+        SelectionSort selectionSortString = new SelectionSort();
+        Random random = new Random(seed);
+        String [] StringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[0];
+            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[1];
+            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[2];
+            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[3];
+            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[4];
+            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[5];
+            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[6];
+            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[7];
+            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[8];
+            else StringArray[i]=sortedStrings[9];
+        }
+        long startTime = System.currentTimeMillis();
+        selectionSortString.sort(StringArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    /**
+     * Returns the amount of time to sort an array of reverse sorted strings using Selection Sort
+     * 
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  length of time to append all items
+     */
+    public long timeSelectionSortWorstCaseStrings(int numberOfItems, int seed) {
+        SelectionSort selectionSortString = new SelectionSort();
+        Random random = new Random(seed);
+        String [] StringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[9];
+            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[8];
+            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[7];
+            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[6];
+            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[5];
+            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[4];
+            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[3];
+            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[2];
+            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[1];
+            else StringArray[i]=sortedStrings[0];
+        }
+        long startTime = System.currentTimeMillis();
+        selectionSortString.sort(StringArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+
     /**
      * Runs a series of tests of sorting various types of data of various lengths. 
      * Different sorting algorithms are used during the tests. Writes the time for 
