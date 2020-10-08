@@ -16,7 +16,9 @@ public class QuicksortRand extends Quicksort
     }
     
     public int partition (int[] a, int fst, int lst) {
-        int pivot = a[random.nextInt(lst+1)];
+        int pivotIndex = random.nextInt(lst+1);
+        swap(a, pivotIndex, lst - 1);
+        int pivot = a[lst - 1];
         
         /*
         int i;
@@ -31,8 +33,9 @@ public class QuicksortRand extends Quicksort
         }
 
         swap(a, i , lst - 1);
-        return i; */
+        return i; //*/
         
+        ///*
         int u = fst;
         int d = lst;
         do { 
@@ -44,7 +47,7 @@ public class QuicksortRand extends Quicksort
                 swap(a, u, d);
         } while (u < d);
         swap(a, fst, d);
-        return d;
+        return d; //*/
     }
     
     
