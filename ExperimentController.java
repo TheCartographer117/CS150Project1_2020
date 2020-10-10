@@ -897,53 +897,178 @@ public class ExperimentController {
         long runTime = stopTime - startTime;
         return runTime;
     }
+    
+    public long timeJavaQuicksortSortedInts(int numberOfItems, int seed) {
+        int [] intArray = createSortedInts(numberOfItems);
+        long startTime = System.currentTimeMillis();
+        Arrays.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    public long timeJavaQuicksortRandInts(int numberOfItems, int seed) {
+        int [] intArray = createRandInts(numberOfItems, seed);
+        long startTime = System.currentTimeMillis();
+        Arrays.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    public long timeJavaQuicksortWorstCaseInts(int numberOfItems, int seed) {
+        int [] intArray = createWorstInts(numberOfItems);
+        long startTime = System.currentTimeMillis();
+        Arrays.sort(intArray);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    ///
+    
+    /**
+     * Creates an array list of random Strings of specified length.
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  array list of random Strings
+     */
+    public ArrayList<String> createRandStringsArrayList(int numberOfItems, int seed) {
+        Random random = new Random(seed);
+        ArrayList<String> stringAL = new ArrayList<String>();
+        for (int i = 0; i < numberOfItems; i++) {
+            int idx = random.nextInt(sortedStrings.length);
+            stringAL.add(sortedStrings[idx]);
+        }
+        return stringAL;
+    }
+    
+    /**
+     * Creates an array of sorted Strings of specified length.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @return  array of sorted Strings
+     */
+    public ArrayList<String> createSortedStringsArrayList(int numberOfItems) {
+        ArrayList<String> stringAL = new ArrayList<String>();
+        for (int i = 0; i < numberOfItems; i++) {
+            if (i < (numberOfItems/10)) stringAL.add(sortedStrings[0]);
+            else if (i < (numberOfItems*(2/10))) stringAL.add(sortedStrings[1]);
+            else if (i < (numberOfItems*(3/10))) stringAL.add(sortedStrings[2]);
+            else if (i < (numberOfItems*(4/10))) stringAL.add(sortedStrings[3]);
+            else if (i < (numberOfItems*(5/10))) stringAL.add(sortedStrings[4]);
+            else if (i < (numberOfItems*(6/10))) stringAL.add(sortedStrings[5]);
+            else if (i < (numberOfItems*(7/10))) stringAL.add(sortedStrings[6]);
+            else if (i < (numberOfItems*(8/10))) stringAL.add(sortedStrings[7]);
+            else if (i < (numberOfItems*(9/10))) stringAL.add(sortedStrings[8]);
+            else stringAL.add(sortedStrings[9]);
+        }
+        return stringAL;
+    }
+    
+    /**
+     * Creates an array of reverse sorted Strings of specified length.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @return  array of reverse sorted Strings
+     */
+    public ArrayList<String> createWorstStringsArrayList(int numberOfItems) {
+        ArrayList<String> stringAL = new ArrayList<String>();
+        for (int i = 0; i < numberOfItems; i++) {
+            if (i < (numberOfItems/10)) stringAL.add(sortedStrings[9]);
+            else if (i < (numberOfItems*(2/10))) stringAL.add(sortedStrings[8]);
+            else if (i < (numberOfItems*(3/10))) stringAL.add(sortedStrings[7]);
+            else if (i < (numberOfItems*(4/10))) stringAL.add(sortedStrings[6]);
+            else if (i < (numberOfItems*(5/10))) stringAL.add(sortedStrings[5]);
+            else if (i < (numberOfItems*(6/10))) stringAL.add(sortedStrings[4]);
+            else if (i < (numberOfItems*(7/10))) stringAL.add(sortedStrings[3]);
+            else if (i < (numberOfItems*(8/10))) stringAL.add(sortedStrings[2]);
+            else if (i < (numberOfItems*(9/10))) stringAL.add(sortedStrings[1]);
+            else stringAL.add(sortedStrings[0]);
+        }
+        return stringAL;
+    }
+    
+    public long timeJavaMergesortSortedStrings(int numberOfItems, int seed) {
+        ArrayList<String> stringAL = createSortedStringsArrayList(numberOfItems);
+        long startTime = System.currentTimeMillis();
+        Collections.sort(stringAL);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    public long timeJavaMergesortRandStrings(int numberOfItems, int seed) {
+        ArrayList<String> stringAL = createRandStringsArrayList(numberOfItems, seed);
+        long startTime = System.currentTimeMillis();
+        Collections.sort(stringAL);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
+    
+    public long timeJavaMergesortWorstCaseStrings(int numberOfItems, int seed) {
+        ArrayList<String> stringAL = createWorstStringsArrayList(numberOfItems);
+        long startTime = System.currentTimeMillis();
+        Collections.sort(stringAL);
+        long stopTime = System.currentTimeMillis();
+        long runTime = stopTime - startTime;
+        return runTime;
+    }
 
     /**
      * Runs a series of tests of sorting various types of data of various lengths. 
      * Different sorting algorithms are used during the tests. Writes the time for 
      * each test to a comma delimited file.
      */
-    public void sortTimes() {
+    public void compareEffecientSortsSorted() {
         String line1 = new String();
         String line2 = new String();
         String line3 = new String();
         String line4 = new String();
         String line5 = new String();
         String line6 = new String();
-        String line7 = new String();
         int [] seed = {117, 2100, 777};
         int [] numberOfItemsLong = {1000, 2500, 5000, 7500, 10000};//, 10000, 15000, 25000};
         int [] numberOfItemsMedium = {1000, 10000, 25000, 50000, 75000, 100000};
         int [] numberOfItemsFast = {1000, 2500, 5000, 7500, 10000, 25000, 50000, 100000, 500000, 1000000};
         try {
-            FileWriter output = new FileWriter("Lab6_Output.csv"); 
+            FileWriter output = new FileWriter("Project1_compareEffecientSorts.csv"); 
             // initialize the FileWriter object where the results will be printed
             for (int j: seed) { // taken from lecture: j steps through using the array seed's values
                 Random random = new Random(j);
                 for (int i: numberOfItemsFast) { // i steps through using the array numberOfItem's values
-                    //line1 = "seed: ," + j + ", No. Items: ," + i + ", timeSearchDefault Trials: "; 
-                    //line2 = "seed: ," + j + ", No. Items: ," + i + ", timeSearchIterator Trials:";
+                    line1 = "seed: ," + j + ", No. Items: ," + i + ", FirstPivQuicksort Sorted Trials: ";
+                    line2 = "seed: ," + j + ", No. Items: ," + i + ", RandPivQuicksort Sorted Trials: "; 
+                    line3 = "seed: ," + j + ", No. Items: ," + i + ", MedianPivQuicksort Sorted Trials: "; 
+                    line4 = "seed: ," + j + ", No. Items: ," + i + ", Arrays.Quicksort Sorted Trials:";
                     // creates header for data
                     for (int k = 0; k < 10; k ++) { // run each method 5 times to get an average
                         //searchTarget = random.nextInt(201);
-                        //line1 = line1.concat("," + String.valueOf(timeSearchDefault(i, j)));
-                        //line2 = line2.concat("," + Long.toString(timeSearchIterator(i, j)));
+                        line1 = line1.concat("," + String.valueOf(timeQuicksortFirstSortedInts(i, j)));
+                        line2 = line2.concat("," + Long.toString(timeQuicksortRandSortedInts(i, j)));
+                        line3 = line3.concat("," + Long.toString(timeQuicksortMedianSortedInts(i, j)));
+                        line4 = line4.concat("," + Long.toString(timeJavaQuicksortSortedInts(i, j)));
                     }
-                    //output.write(line1 + "\n"); // writes the line and starts a new line
-                    //output.write(line2 + "\n");
+                    output.write(line1 + "\n"); // writes the line and starts a new line
+                    output.write(line2  + "\n");
+                    output.write(line3 + "\n");
+                    output.write(line4 + "\n");
                 }
             }
             for (int j: seed) { // taken from lecture: j steps through using the array seed's values
                 for (int i: numberOfItemsLong) { // i steps through using the array numberOfItem's values
-                    //line1 = "seed: ," + j + ", No. Items: ," + i + ", timeSearchDefault Trials: "; 
-                    //line2 = "seed: ," + j + ", No. Items: ," + i + ", timeToString Trials:";
+                    line1 = "seed: ," + j + ", No. Items: ," + i + ", CustomMergesort Sorted Trials: "; 
+                    line2 = "seed: ," + j + ", No. Items: ," + i + ", Collections.Mergesort Sorted Trials:";
                     // creates header for data
                     for (int k = 0; k < 10; k ++) { // run each method 5 times to get an average
-                        //line1 = line1.concat("," + String.valueOf(timeSearchDefault(i, j)));
-                        //line2 = line2.concat("," + Long.toString(timeToString(i, j)));
+                        line1 = line1.concat("," + String.valueOf(timeMergeSortSortedStrings(i, j)));
+                        line2 = line2.concat("," + Long.toString(timeJavaMergesortSortedStrings(i, j)));
                     }
-                    //output.write(line1 + "\n"); // writes the line and starts a new line
-                    //output.write(line2 + "\n");
+                    output.write(line1 + "\n"); // writes the line and starts a new line
+                    output.write(line2 + "\n");
                 }
             }
             output.close(); // closes the FileWriter
