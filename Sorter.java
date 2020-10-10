@@ -2,8 +2,8 @@ import java.util.*;
 /**
  * An interface of sorting algorithms
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Ge Xia, Benjamin Gersten and Taylor Strong
+ * @version Oct 10, 2020
  */
 public interface Sorter {
     /**

@@ -1,10 +1,10 @@
 import java.util.*;
 
 /**
- * Write a description of class InsertionSort here.
+ * An implement of InsertionSort
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Benjamin Gersten and Taylor Strong
+ * @version Oct 10, 2020
  */
 public class InsertionSort implements Sorter {
     /**

@@ -2,8 +2,8 @@ import java.util.*;
 /**
  * An implement of Selection sort
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Benjamin Gersten and Taylor Strong
+ * @version Oct 10, 2020
  */
 public class SelectionSort implements Sorter {
     /**

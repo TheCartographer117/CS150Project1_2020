@@ -1,14 +1,13 @@
-
 import java.util.*;
 import java.io.FileWriter;
 /**
- * Write a description of class ExperimentController here.
+ * Creates arrays of various types and tests various sorting algorithms in sorting them. Runtime data is collected
+ * and added to a comma deliminated file by some methods.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Benjamin Gersten and Taylor Strong
+ * @version Oct 10, 2020
  */
-public class ExperimentController
-{
+public class ExperimentController {
     String[] sortedStrings = {"aa","ab","ac","ad","ae","af","ag","ah","ai","aj","ak","al","am","an","ao","ap","aq","ar","as","at","au","av","aw","ax","ay"};
 
     /**
@@ -22,6 +21,115 @@ public class ExperimentController
     }
     
     /**
+     * Creates an array of sorted ints of specified length.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @return  array of sorted ints
+     */
+    public int[] createSortedInts(int numberOfItems) {
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = i;
+        }
+        return intArray;
+    }
+    
+    /**
+     * Creates an array of random ints of specified length.
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  array of random ints
+     */
+    public int[] createRandInts(int numberOfItems, int seed) {
+        Random random = new Random(seed);
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = random.nextInt(201);
+        }
+        return intArray;
+    }
+    
+    /**
+     * Creates an array of reverse sorted ints of specified length.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @return  array of reverse sorted ints
+     */
+    public int[] createWorstInts(int numberOfItems) {
+        int [] intArray = new int [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            intArray[i] = numberOfItems - i - 1;
+        }
+        return intArray;
+    }
+    
+    /**
+     * Creates an array of random Strings of specified length.
+     * The randomness is controlled by the seed.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @param   seed            initial value of the internal state of the pseudorandom number generator
+     * @return  array of random Strings
+     */
+    public String[] createRandStrings(int numberOfItems, int seed) {
+        Random random = new Random(seed);
+        String [] stringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            int idx = random.nextInt(sortedStrings.length);
+            stringArray[i] = sortedStrings[idx];
+        }
+        return stringArray;
+    }
+    
+    /**
+     * Creates an array of sorted Strings of specified length.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @return  array of sorted Strings
+     */
+    public String[] createSortedStrings(int numberOfItems) {
+        String [] stringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            if (i < (numberOfItems/10)) stringArray[i]=sortedStrings[0];
+            else if (i < (numberOfItems*(2/10))) stringArray[i]=sortedStrings[1];
+            else if (i < (numberOfItems*(3/10))) stringArray[i]=sortedStrings[2];
+            else if (i < (numberOfItems*(4/10))) stringArray[i]=sortedStrings[3];
+            else if (i < (numberOfItems*(5/10))) stringArray[i]=sortedStrings[4];
+            else if (i < (numberOfItems*(6/10))) stringArray[i]=sortedStrings[5];
+            else if (i < (numberOfItems*(7/10))) stringArray[i]=sortedStrings[6];
+            else if (i < (numberOfItems*(8/10))) stringArray[i]=sortedStrings[7];
+            else if (i < (numberOfItems*(9/10))) stringArray[i]=sortedStrings[8];
+            else stringArray[i]=sortedStrings[9];
+        }
+        return stringArray;
+    }
+    
+    /**
+     * Creates an array of reverse sorted Strings of specified length.
+     *
+     * @param   numberOfItems   the number of items to insert into the array
+     * @return  array of reverse sorted Strings
+     */
+    public String[] createWorstStrings(int numberOfItems) {
+        String [] stringArray = new String [numberOfItems];
+        for (int i = 0; i < numberOfItems; i++) {
+            if (i < (numberOfItems/10)) stringArray[i]=sortedStrings[9];
+            else if (i < (numberOfItems*(2/10))) stringArray[i]=sortedStrings[8];
+            else if (i < (numberOfItems*(3/10))) stringArray[i]=sortedStrings[7];
+            else if (i < (numberOfItems*(4/10))) stringArray[i]=sortedStrings[6];
+            else if (i < (numberOfItems*(5/10))) stringArray[i]=sortedStrings[5];
+            else if (i < (numberOfItems*(6/10))) stringArray[i]=sortedStrings[4];
+            else if (i < (numberOfItems*(7/10))) stringArray[i]=sortedStrings[3];
+            else if (i < (numberOfItems*(8/10))) stringArray[i]=sortedStrings[2];
+            else if (i < (numberOfItems*(9/10))) stringArray[i]=sortedStrings[1];
+            else stringArray[i]=sortedStrings[0];
+        }
+        return stringArray;
+    }
+    
+    /**
      * Returns the amount of time to sort an array of random integers using Bubble Sort
      * The randomness is controlled by the seed.
      *
@@ -31,11 +139,7 @@ public class ExperimentController
      */
     public long timeBubbleSortRandInts(int numberOfItems, int seed) {
         BubbleSort bubbleInt = new BubbleSort();
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = random.nextInt(201);
-        }
+        int [] intArray = createRandInts(numberOfItems, seed);
         long startTime = System.currentTimeMillis();
         bubbleInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -53,11 +157,7 @@ public class ExperimentController
      */
     public long timeBubbleSortSortedInts(int numberOfItems, int seed) {
         BubbleSort bubbleInt = new BubbleSort();
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = i;
-        }
+        int [] intArray = createSortedInts(numberOfItems);
         long startTime = System.currentTimeMillis();
         bubbleInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -75,11 +175,7 @@ public class ExperimentController
      */
     public long timeBubbleSortWorstCaseInts(int numberOfItems, int seed) {
         BubbleSort bubbleInt = new BubbleSort();
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = numberOfItems - i - 1;
-        }
+        int [] intArray = createWorstInts(numberOfItems);
         long startTime = System.currentTimeMillis();
         bubbleInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -97,12 +193,7 @@ public class ExperimentController
      */
     public long timeBubbleSortRandStrings(int numberOfItems, int seed) {
         BubbleSort bubbleString = new BubbleSort();
-        Random random = new Random(seed);
-        String [] stringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            int idx = random.nextInt(sortedStrings.length);
-            stringArray[i] = sortedStrings[idx];
-        }
+        String[] stringArray = createRandStrings(numberOfItems, seed);
         long startTime = System.currentTimeMillis();
         bubbleString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
@@ -120,22 +211,9 @@ public class ExperimentController
      */
     public long timeBubbleSortSortedStrings(int numberOfItems, int seed) {
         BubbleSort bubbleString = new BubbleSort();
-        Random random = new Random(seed);
-        String [] StringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[0];
-            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[1];
-            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[2];
-            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[3];
-            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[4];
-            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[5];
-            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[6];
-            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[7];
-            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[8];
-            else StringArray[i]=sortedStrings[9];
-        }
+        String[] stringArray = createSortedStrings(numberOfItems);
         long startTime = System.currentTimeMillis();
-        bubbleString.sort(StringArray);
+        bubbleString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -151,22 +229,9 @@ public class ExperimentController
      */
     public long timeBubbleSortWorstCaseStrings(int numberOfItems, int seed) {
         BubbleSort bubbleString = new BubbleSort();
-        Random random = new Random(seed);
-        String [] StringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[9];
-            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[8];
-            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[7];
-            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[6];
-            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[5];
-            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[4];
-            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[3];
-            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[2];
-            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[1];
-            else StringArray[i]=sortedStrings[0];
-        }
+        String[] stringArray = createWorstStrings(numberOfItems);
         long startTime = System.currentTimeMillis();
-        bubbleString.sort(StringArray);
+        bubbleString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -182,11 +247,7 @@ public class ExperimentController
      */
     public long timeInsertionSortRandInts(int numberOfItems, int seed) {
         InsertionSort insertionInt = new InsertionSort();
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = random.nextInt(201);
-        }
+        int [] intArray = createRandInts(numberOfItems, seed);
         long startTime = System.currentTimeMillis();
         insertionInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -204,11 +265,7 @@ public class ExperimentController
      */
     public long timeInsertionSortSortedInts(int numberOfItems, int seed) {
         InsertionSort insertionInt = new InsertionSort();
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = i;
-        }
+        int [] intArray = createSortedInts(numberOfItems);
         long startTime = System.currentTimeMillis();
         insertionInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -226,11 +283,7 @@ public class ExperimentController
      */
     public long timeInsertionSortWorstCaseInts(int numberOfItems, int seed) {
         InsertionSort insertionInt = new InsertionSort();
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = numberOfItems - i - 1;
-        }
+        int [] intArray = createWorstInts(numberOfItems);
         long startTime = System.currentTimeMillis();
         insertionInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -248,12 +301,7 @@ public class ExperimentController
      */
     public long timeInsertionSortRandStrings(int numberOfItems, int seed) {
         InsertionSort insertionString = new InsertionSort();
-        Random random = new Random(seed);
-        String [] stringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            int idx = random.nextInt(sortedStrings.length);
-            stringArray[i] = sortedStrings[idx];
-        }
+        String[] stringArray = createRandStrings(numberOfItems, seed);
         long startTime = System.currentTimeMillis();
         insertionString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
@@ -271,22 +319,9 @@ public class ExperimentController
      */
     public long timeInsertionSortSortedStrings(int numberOfItems, int seed) {
         InsertionSort insertionString = new InsertionSort();
-        Random random = new Random(seed);
-        String [] StringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[0];
-            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[1];
-            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[2];
-            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[3];
-            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[4];
-            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[5];
-            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[6];
-            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[7];
-            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[8];
-            else StringArray[i]=sortedStrings[9];
-        }
+        String[] stringArray = createSortedStrings(numberOfItems);
         long startTime = System.currentTimeMillis();
-        insertionString.sort(StringArray);
+        insertionString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -302,22 +337,9 @@ public class ExperimentController
      */
     public long timeInsertionSortWorstCaseStrings(int numberOfItems, int seed) {
         InsertionSort insertionString = new InsertionSort();
-        Random random = new Random(seed);
-        String [] StringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[9];
-            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[8];
-            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[7];
-            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[6];
-            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[5];
-            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[4];
-            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[3];
-            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[2];
-            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[1];
-            else StringArray[i]=sortedStrings[0];
-        }
+        String[] stringArray = createWorstStrings(numberOfItems);
         long startTime = System.currentTimeMillis();
-        insertionString.sort(StringArray);
+        insertionString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -334,11 +356,7 @@ public class ExperimentController
      */
     public long timeQuicksortFirstRandInts(int numberOfItems, int seed) {
         QuicksortFirst quicksortFirstInt = new QuicksortFirst();
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = random.nextInt(201);
-        }
+        int [] intArray = createRandInts(numberOfItems, seed);
         long startTime = System.currentTimeMillis();
         quicksortFirstInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -357,11 +375,7 @@ public class ExperimentController
      */
     public long timeQuicksortFirstSortedInts(int numberOfItems, int seed) {
         QuicksortFirst quicksortFirstInt = new QuicksortFirst();
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = i;
-        }
+        int [] intArray = createSortedInts(numberOfItems);
         long startTime = System.currentTimeMillis();
         quicksortFirstInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -380,11 +394,7 @@ public class ExperimentController
      */
     public long timeQuicksortFirstWorstCaseInts(int numberOfItems, int seed) {
         QuicksortFirst quicksortFirstInt = new QuicksortFirst();
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = numberOfItems - i - 1;
-        }
+        int [] intArray = createWorstInts(numberOfItems);
         long startTime = System.currentTimeMillis();
         quicksortFirstInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -403,12 +413,7 @@ public class ExperimentController
      */
     public long timeQuicksortFirstRandStrings(int numberOfItems, int seed) {
         QuicksortFirst quicksortFirstString = new QuicksortFirst();
-        Random random = new Random(seed);
-        String [] stringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            int idx = random.nextInt(sortedStrings.length);
-            stringArray[i] = sortedStrings[idx];
-        }
+        String[] stringArray = createRandStrings(numberOfItems, seed);
         long startTime = System.currentTimeMillis();
         quicksortFirstString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
@@ -427,22 +432,9 @@ public class ExperimentController
      */
     public long timeQuicksortFirstSortedStrings(int numberOfItems, int seed) {
         QuicksortFirst quicksortFirstString = new QuicksortFirst();
-        Random random = new Random(seed);
-        String [] StringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[0];
-            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[1];
-            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[2];
-            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[3];
-            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[4];
-            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[5];
-            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[6];
-            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[7];
-            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[8];
-            else StringArray[i]=sortedStrings[9];
-        }
+        String[] stringArray = createSortedStrings(numberOfItems);
         long startTime = System.currentTimeMillis();
-        quicksortFirstString.sort(StringArray);
+        quicksortFirstString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -458,22 +450,9 @@ public class ExperimentController
      */
     public long timeQuicksortFirstWorstCaseStrings(int numberOfItems, int seed) {
         QuicksortFirst quicksortFirstString = new QuicksortFirst();
-        Random random = new Random(seed);
-        String [] StringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[9];
-            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[8];
-            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[7];
-            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[6];
-            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[5];
-            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[4];
-            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[3];
-            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[2];
-            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[1];
-            else StringArray[i]=sortedStrings[0];
-        }
+        String[] stringArray = createWorstStrings(numberOfItems);
         long startTime = System.currentTimeMillis();
-        quicksortFirstString.sort(StringArray);
+        quicksortFirstString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -490,11 +469,7 @@ public class ExperimentController
      */
     public long timeQuicksortMedianRandInts(int numberOfItems, int seed) {
         QuicksortMedian QuicksortMedianInt = new QuicksortMedian();
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = random.nextInt(201);
-        }
+        int [] intArray = createRandInts(numberOfItems, seed);
         long startTime = System.currentTimeMillis();
         QuicksortMedianInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -513,11 +488,7 @@ public class ExperimentController
      */
     public long timeQuicksortMedianSortedInts(int numberOfItems, int seed) {
         QuicksortMedian QuicksortMedianInt = new QuicksortMedian();
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = i;
-        }
+        int [] intArray = createSortedInts(numberOfItems);
         long startTime = System.currentTimeMillis();
         QuicksortMedianInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -536,11 +507,7 @@ public class ExperimentController
      */
     public long timeQuicksortMedianWorstCaseInts(int numberOfItems, int seed) {
         QuicksortMedian quicksortMedianInt = new QuicksortMedian();
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = numberOfItems - i - 1;
-        }
+        int [] intArray = createWorstInts(numberOfItems);
         long startTime = System.currentTimeMillis();
         quicksortMedianInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -559,12 +526,7 @@ public class ExperimentController
      */
     public long timeQuicksortMedianRandStrings(int numberOfItems, int seed) {
         QuicksortMedian quicksortMedianString = new QuicksortMedian();
-        Random random = new Random(seed);
-        String [] stringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            int idx = random.nextInt(sortedStrings.length);
-            stringArray[i] = sortedStrings[idx];
-        }
+        String[] stringArray = createRandStrings(numberOfItems, seed);
         long startTime = System.currentTimeMillis();
         quicksortMedianString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
@@ -583,22 +545,9 @@ public class ExperimentController
      */
     public long timeQuicksortMedianSortedStrings(int numberOfItems, int seed) {
         QuicksortMedian quicksortMedianString = new QuicksortMedian();
-        Random random = new Random(seed);
-        String [] StringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[0];
-            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[1];
-            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[2];
-            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[3];
-            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[4];
-            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[5];
-            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[6];
-            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[7];
-            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[8];
-            else StringArray[i]=sortedStrings[9];
-        }
+        String[] stringArray = createSortedStrings(numberOfItems);
         long startTime = System.currentTimeMillis();
-        quicksortMedianString.sort(StringArray);
+        quicksortMedianString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -614,22 +563,9 @@ public class ExperimentController
      */
     public long timeQuicksortMedianWorstCaseStrings(int numberOfItems, int seed) {
         QuicksortMedian quicksortMedianString = new QuicksortMedian();
-        Random random = new Random(seed);
-        String [] StringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[9];
-            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[8];
-            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[7];
-            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[6];
-            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[5];
-            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[4];
-            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[3];
-            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[2];
-            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[1];
-            else StringArray[i]=sortedStrings[0];
-        }
+        String[] stringArray = createWorstStrings(numberOfItems);
         long startTime = System.currentTimeMillis();
-        quicksortMedianString.sort(StringArray);
+        quicksortMedianString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -646,11 +582,7 @@ public class ExperimentController
      */
     public long timeQuicksortRandRandInts(int numberOfItems, int seed) {
         QuicksortRand quicksortRandInt = new QuicksortRand(seed);
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = random.nextInt(201);
-        }
+        int [] intArray = createRandInts(numberOfItems, seed);
         long startTime = System.currentTimeMillis();
         quicksortRandInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -669,11 +601,7 @@ public class ExperimentController
      */
     public long timeQuicksortRandSortedInts(int numberOfItems, int seed) {
         QuicksortRand quicksortRandInt = new QuicksortRand(seed);
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = i;
-        }
+        int [] intArray = createSortedInts(numberOfItems);
         long startTime = System.currentTimeMillis();
         quicksortRandInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -692,11 +620,7 @@ public class ExperimentController
      */
     public long timeQuicksortRandWorstCaseInts(int numberOfItems, int seed) {
         QuicksortRand quicksortRandInt = new QuicksortRand(seed);
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = numberOfItems - i - 1;
-        }
+        int [] intArray = createWorstInts(numberOfItems);
         long startTime = System.currentTimeMillis();
         quicksortRandInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -715,12 +639,7 @@ public class ExperimentController
      */
     public long timeQuicksortRandRandStrings(int numberOfItems, int seed) {
         QuicksortRand quicksortRandString = new QuicksortRand(seed);
-        Random random = new Random(seed);
-        String [] stringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            int idx = random.nextInt(sortedStrings.length);
-            stringArray[i] = sortedStrings[idx];
-        }
+        String[] stringArray = createRandStrings(numberOfItems, seed);
         long startTime = System.currentTimeMillis();
         quicksortRandString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
@@ -739,22 +658,9 @@ public class ExperimentController
      */
     public long timeQuicksortRandSortedStrings(int numberOfItems, int seed) {
         QuicksortRand quicksortRandString = new QuicksortRand(seed);
-        Random random = new Random(seed);
-        String [] StringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[0];
-            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[1];
-            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[2];
-            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[3];
-            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[4];
-            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[5];
-            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[6];
-            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[7];
-            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[8];
-            else StringArray[i]=sortedStrings[9];
-        }
+        String[] stringArray = createSortedStrings(numberOfItems);
         long startTime = System.currentTimeMillis();
-        quicksortRandString.sort(StringArray);
+        quicksortRandString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -770,22 +676,9 @@ public class ExperimentController
      */
     public long timeQuicksortRandWorstCaseStrings(int numberOfItems, int seed) {
         QuicksortRand quicksortRandString = new QuicksortRand(seed);
-        Random random = new Random(seed);
-        String [] StringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[9];
-            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[8];
-            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[7];
-            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[6];
-            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[5];
-            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[4];
-            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[3];
-            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[2];
-            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[1];
-            else StringArray[i]=sortedStrings[0];
-        }
+        String[] stringArray = createWorstStrings(numberOfItems);
         long startTime = System.currentTimeMillis();
-        quicksortRandString.sort(StringArray);
+        quicksortRandString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -801,11 +694,7 @@ public class ExperimentController
      */
     public long timeMergeSortRandInts(int numberOfItems, int seed) {
         MergeSort mergeSortInt = new MergeSort();
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = random.nextInt(201);
-        }
+        int [] intArray = createRandInts(numberOfItems, seed);
         long startTime = System.currentTimeMillis();
         mergeSortInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -823,11 +712,7 @@ public class ExperimentController
      */
     public long timeMergeSortSortedInts(int numberOfItems, int seed) {
         MergeSort MergeSortInt = new MergeSort();
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = i;
-        }
+        int [] intArray = createSortedInts(numberOfItems);
         long startTime = System.currentTimeMillis();
         MergeSortInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -845,11 +730,7 @@ public class ExperimentController
      */
     public long timeMergeSortWorstCaseInts(int numberOfItems, int seed) {
         MergeSort MergeSortInt = new MergeSort();
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = numberOfItems - i - 1;
-        }
+        int [] intArray = createWorstInts(numberOfItems);
         long startTime = System.currentTimeMillis();
         MergeSortInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -867,12 +748,7 @@ public class ExperimentController
      */
     public long timeMergeSortRandStrings(int numberOfItems, int seed) {
         MergeSort mergeSortString = new MergeSort();
-        Random random = new Random(seed);
-        String [] stringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            int idx = random.nextInt(sortedStrings.length);
-            stringArray[i] = sortedStrings[idx];
-        }
+        String[] stringArray = createRandStrings(numberOfItems, seed);
         long startTime = System.currentTimeMillis();
         mergeSortString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
@@ -890,22 +766,9 @@ public class ExperimentController
      */
     public long timeMergeSortSortedStrings(int numberOfItems, int seed) {
         MergeSort mergeSortString = new MergeSort();
-        Random random = new Random(seed);
-        String [] StringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[0];
-            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[1];
-            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[2];
-            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[3];
-            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[4];
-            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[5];
-            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[6];
-            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[7];
-            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[8];
-            else StringArray[i]=sortedStrings[9];
-        }
+        String[] stringArray = createSortedStrings(numberOfItems);
         long startTime = System.currentTimeMillis();
-        mergeSortString.sort(StringArray);
+        mergeSortString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -920,22 +783,9 @@ public class ExperimentController
      */
     public long timeMergeSortWorstCaseStrings(int numberOfItems, int seed) {
         MergeSort mergeSortString = new MergeSort();
-        Random random = new Random(seed);
-        String [] StringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[9];
-            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[8];
-            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[7];
-            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[6];
-            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[5];
-            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[4];
-            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[3];
-            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[2];
-            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[1];
-            else StringArray[i]=sortedStrings[0];
-        }
+        String[] stringArray = createWorstStrings(numberOfItems);
         long startTime = System.currentTimeMillis();
-        mergeSortString.sort(StringArray);
+        mergeSortString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -951,11 +801,7 @@ public class ExperimentController
      */
     public long timeSelectionSortRandInts(int numberOfItems, int seed) {
         SelectionSort SelectionSortInt = new SelectionSort();
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = random.nextInt(201);
-        }
+        int [] intArray = createRandInts(numberOfItems, seed);
         long startTime = System.currentTimeMillis();
         SelectionSortInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -973,11 +819,7 @@ public class ExperimentController
      */
     public long timeSelectionSortSortedInts(int numberOfItems, int seed) {
         SelectionSort SelectionSortInt = new SelectionSort();
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = i;
-        }
+        int [] intArray = createSortedInts(numberOfItems);
         long startTime = System.currentTimeMillis();
         SelectionSortInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -995,11 +837,7 @@ public class ExperimentController
      */
     public long timeSelectionSortWorstCaseInts(int numberOfItems, int seed) {
         SelectionSort SelectionSortInt = new SelectionSort();
-        Random random = new Random(seed);
-        int [] intArray = new int [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            intArray[i] = numberOfItems - i - 1;
-        }
+        int [] intArray = createWorstInts(numberOfItems);
         long startTime = System.currentTimeMillis();
         SelectionSortInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
@@ -1017,12 +855,7 @@ public class ExperimentController
      */
     public long timeSelectionSortRandStrings(int numberOfItems, int seed) {
         SelectionSort selectionSortString = new SelectionSort();
-        Random random = new Random(seed);
-        String [] stringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            int idx = random.nextInt(sortedStrings.length);
-            stringArray[i] = sortedStrings[idx];
-        }
+        String[] stringArray = createRandStrings(numberOfItems, seed);
         long startTime = System.currentTimeMillis();
         selectionSortString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
@@ -1040,22 +873,9 @@ public class ExperimentController
      */
     public long timeSelectionSortSortedStrings(int numberOfItems, int seed) {
         SelectionSort selectionSortString = new SelectionSort();
-        Random random = new Random(seed);
-        String [] StringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[0];
-            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[1];
-            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[2];
-            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[3];
-            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[4];
-            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[5];
-            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[6];
-            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[7];
-            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[8];
-            else StringArray[i]=sortedStrings[9];
-        }
+        String[] stringArray = createSortedStrings(numberOfItems);
         long startTime = System.currentTimeMillis();
-        selectionSortString.sort(StringArray);
+        selectionSortString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;
@@ -1070,22 +890,9 @@ public class ExperimentController
      */
     public long timeSelectionSortWorstCaseStrings(int numberOfItems, int seed) {
         SelectionSort selectionSortString = new SelectionSort();
-        Random random = new Random(seed);
-        String [] StringArray = new String [numberOfItems];
-        for (int i = 0; i < numberOfItems; i++) {
-            if (i < (numberOfItems/10)) StringArray[i]=sortedStrings[9];
-            else if (i < (numberOfItems*(2/10))) StringArray[i]=sortedStrings[8];
-            else if (i < (numberOfItems*(3/10))) StringArray[i]=sortedStrings[7];
-            else if (i < (numberOfItems*(4/10))) StringArray[i]=sortedStrings[6];
-            else if (i < (numberOfItems*(5/10))) StringArray[i]=sortedStrings[5];
-            else if (i < (numberOfItems*(6/10))) StringArray[i]=sortedStrings[4];
-            else if (i < (numberOfItems*(7/10))) StringArray[i]=sortedStrings[3];
-            else if (i < (numberOfItems*(8/10))) StringArray[i]=sortedStrings[2];
-            else if (i < (numberOfItems*(9/10))) StringArray[i]=sortedStrings[1];
-            else StringArray[i]=sortedStrings[0];
-        }
+        String[] stringArray = createWorstStrings(numberOfItems);
         long startTime = System.currentTimeMillis();
-        selectionSortString.sort(StringArray);
+        selectionSortString.sort(stringArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
         return runTime;

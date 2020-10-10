@@ -1,58 +1,57 @@
 import java.util.*;
 /**
- * Write a description of class QuicksortFirst here.
+ * An implement of Quicksort using the first element as the pivot
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Benjamin Gersten and Taylor Strong
+ * @version Oct 10, 2020
  */
 public class QuicksortFirst extends Quicksort {
-    
-    public int partition (int[] a, int fst, int lst) {
+    /**
+     * Determines the pivot value which is the first element of the subarray
+     * 
+     * @param   a       an array of ints.
+     * @param   fst     first element of the subarray
+     * @param   lst     last element of the subarray
+     * @return  the pivot
+     */
+    public int findPivot(int[] a, int fst, int lst) {
         int pivot = a[fst];
-        int u = fst;
-        int d = lst;
-        do { 
-            while ((u < lst) && (pivot >= a[u]))
-                u++; 
-            while (pivot < a[d]) 
-                d--; 
-            if (u < d) 
-                swap(a, u, d);
-        } while (u < d);
-        swap(a, fst, d);
-        return d; 
+        return pivot;
     }
     
-    
-    public <T extends Comparable<? super T>> int partition (T[] a, int fst, int lst) {
+    /**
+     * Determines the pivot value which is the first element of the subarray
+     * 
+     * @param   a       an array of comparable items.
+     * @param   fst     first element of the subarray
+     * @param   lst     last element of the subarray
+     * @return  the pivot
+     */
+    public <T extends Comparable<? super T>> T findPivot(T[] a, int fst, int lst) {
         T pivot = a[fst];
-        int u = fst;
-        int d = lst;
-        do { 
-            while ((u < lst) && (pivot.compareTo(a[u]) >= 0)) 
-                u++; 
-            while (pivot.compareTo(a[d]) < 0) 
-                d--; 
-            if (u < d) 
-                swap(a, u, d); 
-        } while (u < d);
-        swap(a, fst, d);
-        return d; 
+        return pivot;
     }
     
-    public <T> int partition (T[] a, int fst, int lst, Comparator<T> c) {
+    /**
+     * Determines the pivot value which is the first element of the subarray. Uses a comparator object.
+     * 
+     * @param   a       an array of objects.
+     * @param   fst     first element of the subarray
+     * @param   lst     last element of the subarray
+     * @param   c       a comparator object
+     * @return  the pivot
+     */
+    public <T> T findPivot (T[] a, int fst, int lst, Comparator<T> c) {
         T pivot = a[fst];
-        int u = fst;
-        int d = lst;
-        do { 
-            while ((u < lst) && (c.compare(pivot, a[u]) >= 0))
-                u++; 
-            while (c.compare(pivot, a[u]) < 0)
-                d--; 
-            if (u < d) 
-                swap(a, u, d); 
-        } while (u < d);
-        swap(a, fst, d);
-        return d; 
+        return pivot;
+    }
+    
+    /**
+     * Return the method of sorting. 
+     *
+     * @return the method of sorting
+     */ 
+    public String toString() {
+        return "First Pivot Quicksort";
     }
 }

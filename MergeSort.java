@@ -2,8 +2,8 @@ import java.util.*;
 /**
  * An Implement of MergeSort
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Benjamin Gersten and Taylor Strong
+ * @version Oct 10, 2020
  */
 public class MergeSort implements Sorter {
     /**
@@ -35,9 +35,10 @@ public class MergeSort implements Sorter {
     /**
      * Called by int sort to merge sorted components
      * 
-     * @param   a   an array of comparable objects
-     * @param   start   the start of the array being sorted
-     * @param   end the end of the array being sorted
+     * @param   a           an array of comparable objects
+     * @param   start       the start of the array being sorted
+     * @param   half        the midpoint of the array being sorted
+     * @param   end         the end of the array being sorted
      */
     private void merge(int[] a, int start, int half, int end) { 
         int[] b = Arrays.copyOfRange(a, start, half+1); 
@@ -81,9 +82,10 @@ public class MergeSort implements Sorter {
     /**
      * Called by sort to merge sorted components (comparable objects)
      * 
-     * @param   a   an array of comparable objects
-     * @param   start   the start of the array being sorted
-     * @param   end the end of the array being sortedd 
+     * @param   a           an array of comparable objects
+     * @param   start       the start of the array being sorted
+     * @param   half        the midpoint of the array being sorted
+     * @param   end         the end of the array being sorted
      */
     private static <T extends Comparable<? super T>> void merge(T[] a, int start, int half, int end) { 
         T[] b = Arrays.copyOfRange(a, start, half+1); 
@@ -98,6 +100,12 @@ public class MergeSort implements Sorter {
         while (i < b.length) a[k++] = b[i++]; 
     }
     
+    /**
+     * Sort an array of comparable objects using merge sort. Overides interface method.
+     *
+     * @param   a   an array of ints
+     * @param  c  a comparator object
+     */
     public <T> void sort (T[] a, Comparator<T> c) {
         sort(a, 0, a.length - 1, c);
     }
@@ -108,6 +116,7 @@ public class MergeSort implements Sorter {
      * @param   a   an array of comparable objects
      * @param   start   the start of the array being sorted
      * @param   end the end of the array being sorted
+     * @param   c    a comparator object
      */
     public <T> void sort (T[] a, int start, int end, Comparator<T> c) { 
         if (start >= end) return;
@@ -122,9 +131,11 @@ public class MergeSort implements Sorter {
     /**
      * Called by sort to merge sorted components (comparable objects)
      * 
-     * @param   a   an array of comparable objects
-     * @param   start   the start of the array being sorted
-     * @param   end the end of the array being sortedd 
+     * @param   a           an array of comparable objects
+     * @param   start       the start of the array being sorted
+     * @param   half        the midpoint of the array being sorted
+     * @param   end         the end of the array being sorted
+     * @param   c           a comparator object
      */
     private <T> void merge(T[] a, int start, int half, int end, Comparator<T> c) { 
         T[] b = Arrays.copyOfRange(a, start, half+1); 
