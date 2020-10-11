@@ -17,7 +17,7 @@ public class InsertionSort implements Sorter {
             insert(a, nextPos);
         }
     }
-    
+
     /**
      * Called by the sorting method for ints
      * 
@@ -25,15 +25,14 @@ public class InsertionSort implements Sorter {
      * @param   nextPos the next position that an element belongs to
      */
     private void insert (int[] a, int nextPos) { 
-	int nextVal = a[nextPos]; 
-	while (nextPos > 0 && nextVal < a[nextPos-1]){ 
-		a[nextPos] = a[nextPos-1]; 
-		nextPos--;
-	} 
-	a[nextPos] = nextVal;
+        int nextVal = a[nextPos]; 
+        while (nextPos > 0 && nextVal < a[nextPos-1]){ 
+            a[nextPos] = a[nextPos-1]; 
+            nextPos--;
+        } 
+        a[nextPos] = nextVal;
     }
-    
-    
+
     /**
      * Sort an array of comparable objects using insertion sort.
      * 
@@ -44,7 +43,7 @@ public class InsertionSort implements Sorter {
             insert(a, nextPos);
         }
     }
-    
+
     /**
      * Called by the sorting method for comparable objects
      * 
@@ -52,14 +51,14 @@ public class InsertionSort implements Sorter {
      * @param   nextPos the next position that an element belongs to
      */
     private <T extends Comparable<? super T>> void insert (T[] a, int nextPos) { 
-	T nextVal = a[nextPos]; 
-	while (nextPos > 0 && nextVal.compareTo(a[nextPos-1]) < 0){ 
-		a[nextPos] = a[nextPos-1]; 
-		nextPos--;
-	} 
-	a[nextPos] = nextVal;
+        T nextVal = a[nextPos]; 
+        while (nextPos > 0 && nextVal.compareTo(a[nextPos-1]) < 0){ 
+            a[nextPos] = a[nextPos-1]; 
+            nextPos--;
+        } 
+        a[nextPos] = nextVal;
     }
-    
+
     /**
      * Sort an array of objects using insertion sort. 
      *
@@ -71,7 +70,7 @@ public class InsertionSort implements Sorter {
             insert(a, nextPos, c);
         }
     }
-    
+
     /**
      * Sort an array of objects using insertion sort. 
      *
@@ -80,14 +79,14 @@ public class InsertionSort implements Sorter {
      * @param  c  a comparator object
      */
     private static <T> void insert (T[] a, int nextPos, Comparator<T> c) { 
-	T nextVal = a[nextPos]; 
-	while (nextPos > 0 && c.compare(a[nextPos-1], a[nextPos]) < 0){ 
-		a[nextPos] = a[nextPos-1]; 
-		nextPos--;
-	} 
-	a[nextPos] = nextVal;
+        T nextVal = a[nextPos]; 
+        while (nextPos > 0 && c.compare(a[nextPos-1], a[nextPos]) < 0){ 
+            a[nextPos] = a[nextPos-1]; 
+            nextPos--;
+        } 
+        a[nextPos] = nextVal;
     }
-    
+
     /**
      * Return the method of sorting. 
      *

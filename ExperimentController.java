@@ -15,10 +15,11 @@ public class ExperimentController {
      *
      * @param   args  Can be used to pass information from the user to be used in the code.
      */
+    /*
     public static void main (String [] args) {
         ExperimentController controller = new ExperimentController();
         //controller.sortTimes();
-    }
+    } */
     
     /**
      * Creates an array of sorted ints of specified length.
@@ -270,6 +271,13 @@ public class ExperimentController {
         insertionInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
+        /*
+        String output = new String();
+        for(int i = 0; i < intArray.length; i++) {
+            output = output + "" + intArray[i] + ",";
+        }
+        System.out.println(output);
+        System.out.println(runTime); */
         return runTime;
     }
     
@@ -284,10 +292,23 @@ public class ExperimentController {
     public long timeInsertionSortWorstCaseInts(int numberOfItems, int seed) {
         InsertionSort insertionInt = new InsertionSort();
         int [] intArray = createWorstInts(numberOfItems);
+        /*
+        String output1 = new String();
+        for(int i = 0; i < intArray.length; i++) {
+            output1 = output1 + "" + intArray[i] + ",";
+        }
+        System.out.println(output1); */
         long startTime = System.currentTimeMillis();
         insertionInt.sort(intArray);
         long stopTime = System.currentTimeMillis();
         long runTime = stopTime - startTime;
+        /*
+        String output = new String();
+        for(int i = 0; i < intArray.length; i++) {
+            output = output + "" + intArray[i] + ",";
+        }
+        System.out.println(output); */
+        //System.out.println(runTime);
         return runTime;
     }
     
