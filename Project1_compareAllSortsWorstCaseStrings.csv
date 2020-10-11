@@ -1,126 +1,126 @@
-seed: ,117, No. Items: ,1000, FirstPivQuicksort Worst Case Trials: ,21,3,2,2,3,7,7,4,1,0
-seed: ,117, No. Items: ,1000, RandPivQuicksort Worst Case Trials: ,1,0,0,0,0,0,0,0,0,0
-seed: ,117, No. Items: ,1000, MedianPivQuicksort Worst Case Trials: ,1,0,0,0,1,1,1,0,0,1
-seed: ,117, No. Items: ,2500, FirstPivQuicksort Worst Case Trials: ,2,1,2,1,2,1,2,1,2,1
-seed: ,117, No. Items: ,2500, RandPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
+seed: ,117, No. Items: ,1000, FirstPivQuicksort Worst Case Trials: ,0,0,0,0,1,0,0,0,1,0
+seed: ,117, No. Items: ,1000, RandPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
+seed: ,117, No. Items: ,1000, MedianPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
+seed: ,117, No. Items: ,2500, FirstPivQuicksort Worst Case Trials: ,1,1,1,1,2,1,1,2,1,1
+seed: ,117, No. Items: ,2500, RandPivQuicksort Worst Case Trials: ,1,0,0,0,0,0,0,0,0,1
 seed: ,117, No. Items: ,2500, MedianPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
-seed: ,117, No. Items: ,5000, FirstPivQuicksort Worst Case Trials: ,5,4,5,5,5,4,4,5,5,5
-seed: ,117, No. Items: ,5000, RandPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,1,0,0,0
-seed: ,117, No. Items: ,5000, MedianPivQuicksort Worst Case Trials: ,1,0,0,0,1,1,0,1,0,0
-seed: ,117, No. Items: ,6000, FirstPivQuicksort Worst Case Trials: ,8,15,15,14,7,7,7,7,8,7
-seed: ,117, No. Items: ,6000, RandPivQuicksort Worst Case Trials: ,5,4,4,4,1,1,0,0,0,0
-seed: ,117, No. Items: ,6000, MedianPivQuicksort Worst Case Trials: ,3,3,3,1,0,0,0,0,1,0
-seed: ,2100, No. Items: ,1000, FirstPivQuicksort Worst Case Trials: ,0,0,0,0,1,0,0,1,0,0
-seed: ,2100, No. Items: ,1000, RandPivQuicksort Worst Case Trials: ,1,0,0,0,0,0,0,0,0,0
+seed: ,117, No. Items: ,5000, FirstPivQuicksort Worst Case Trials: ,4,5,5,5,5,5,5,5,5,5
+seed: ,117, No. Items: ,5000, RandPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
+seed: ,117, No. Items: ,5000, MedianPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
+seed: ,117, No. Items: ,6000, FirstPivQuicksort Worst Case Trials: ,7,8,8,7,7,7,7,6,6,6
+seed: ,117, No. Items: ,6000, RandPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,1,1,1,1
+seed: ,117, No. Items: ,6000, MedianPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
+seed: ,2100, No. Items: ,1000, FirstPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,1,0,0,0
+seed: ,2100, No. Items: ,1000, RandPivQuicksort Worst Case Trials: ,0,0,1,0,0,0,0,0,0,0
 seed: ,2100, No. Items: ,1000, MedianPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
-seed: ,2100, No. Items: ,2500, FirstPivQuicksort Worst Case Trials: ,2,1,2,2,1,1,1,1,1,2
-seed: ,2100, No. Items: ,2500, RandPivQuicksort Worst Case Trials: ,0,0,0,0,0,1,0,1,0,0
+seed: ,2100, No. Items: ,2500, FirstPivQuicksort Worst Case Trials: ,2,1,1,2,1,1,1,1,1,1
+seed: ,2100, No. Items: ,2500, RandPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,1,0,0,0
 seed: ,2100, No. Items: ,2500, MedianPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
-seed: ,2100, No. Items: ,5000, FirstPivQuicksort Worst Case Trials: ,5,5,5,6,6,5,5,5,5,5
-seed: ,2100, No. Items: ,5000, RandPivQuicksort Worst Case Trials: ,0,0,0,0,0,1,0,0,0,1
-seed: ,2100, No. Items: ,5000, MedianPivQuicksort Worst Case Trials: ,1,0,0,0,0,0,1,0,0,0
-seed: ,2100, No. Items: ,6000, FirstPivQuicksort Worst Case Trials: ,7,8,7,7,8,7,8,8,7,8
-seed: ,2100, No. Items: ,6000, RandPivQuicksort Worst Case Trials: ,0,1,1,0,0,1,0,0,0,0
-seed: ,2100, No. Items: ,6000, MedianPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
-seed: ,777, No. Items: ,1000, FirstPivQuicksort Worst Case Trials: ,0,1,0,0,0,0,0,0,1,0
-seed: ,777, No. Items: ,1000, RandPivQuicksort Worst Case Trials: ,0,0,0,0,1,0,0,0,0,0
+seed: ,2100, No. Items: ,5000, FirstPivQuicksort Worst Case Trials: ,5,5,5,5,5,5,5,5,4,4
+seed: ,2100, No. Items: ,5000, RandPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,1,1
+seed: ,2100, No. Items: ,5000, MedianPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
+seed: ,2100, No. Items: ,6000, FirstPivQuicksort Worst Case Trials: ,6,6,6,6,6,6,6,6,6,6
+seed: ,2100, No. Items: ,6000, RandPivQuicksort Worst Case Trials: ,0,1,1,1,1,1,1,1,1,1
+seed: ,2100, No. Items: ,6000, MedianPivQuicksort Worst Case Trials: ,1,0,0,0,0,0,0,0,0,0
+seed: ,777, No. Items: ,1000, FirstPivQuicksort Worst Case Trials: ,0,0,0,1,0,0,0,1,0,0
+seed: ,777, No. Items: ,1000, RandPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
 seed: ,777, No. Items: ,1000, MedianPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
-seed: ,777, No. Items: ,2500, FirstPivQuicksort Worst Case Trials: ,1,1,1,1,2,1,1,1,2,1
-seed: ,777, No. Items: ,2500, RandPivQuicksort Worst Case Trials: ,1,0,1,0,0,0,1,0,0,0
+seed: ,777, No. Items: ,2500, FirstPivQuicksort Worst Case Trials: ,1,1,1,1,1,1,1,1,1,1
+seed: ,777, No. Items: ,2500, RandPivQuicksort Worst Case Trials: ,1,0,0,1,0,0,0,0,0,0
 seed: ,777, No. Items: ,2500, MedianPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
-seed: ,777, No. Items: ,5000, FirstPivQuicksort Worst Case Trials: ,6,5,6,6,5,6,6,5,5,6
-seed: ,777, No. Items: ,5000, RandPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
-seed: ,777, No. Items: ,5000, MedianPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,1,0,0
-seed: ,777, No. Items: ,6000, FirstPivQuicksort Worst Case Trials: ,8,7,8,8,8,7,7,8,7,8
-seed: ,777, No. Items: ,6000, RandPivQuicksort Worst Case Trials: ,0,1,0,0,0,1,0,0,0,0
-seed: ,777, No. Items: ,6000, MedianPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,1,0,0
-seed: ,117, No. Items: ,1000, Mergesort Worst Case Trials: ,2,0,0,0,0,0,0,0,0,1
-seed: ,117, No. Items: ,2500, Mergesort Worst Case Trials: ,0,0,0,1,0,0,0,0,1,0
-seed: ,117, No. Items: ,5000, Mergesort Worst Case Trials: ,0,1,0,1,0,1,0,1,0,0
-seed: ,117, No. Items: ,7500, Mergesort Worst Case Trials: ,1,0,1,0,0,0,1,0,0,1
-seed: ,117, No. Items: ,10000, Mergesort Worst Case Trials: ,0,1,0,1,0,1,0,1,1,0
-seed: ,117, No. Items: ,25000, Mergesort Worst Case Trials: ,1,1,2,1,1,1,1,1,2,1
-seed: ,117, No. Items: ,50000, Mergesort Worst Case Trials: ,2,3,2,2,3,2,2,1,2,2
-seed: ,117, No. Items: ,75000, Mergesort Worst Case Trials: ,3,3,3,2,3,3,3,3,3,3
-seed: ,117, No. Items: ,100000, Mergesort Worst Case Trials: ,4,4,5,4,4,4,4,4,4,4
-seed: ,117, No. Items: ,500000, Mergesort Worst Case Trials: ,21,20,21,20,21,20,21,22,21,21
-seed: ,117, No. Items: ,1000000, Mergesort Worst Case Trials: ,45,45,45,44,45,44,48,46,45,46
-seed: ,117, No. Items: ,2000000, Mergesort Worst Case Trials: ,85,87,84,88,83,85,84,84,85,83
+seed: ,777, No. Items: ,5000, FirstPivQuicksort Worst Case Trials: ,5,5,5,5,5,5,5,5,4,4
+seed: ,777, No. Items: ,5000, RandPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,1,1
+seed: ,777, No. Items: ,5000, MedianPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
+seed: ,777, No. Items: ,6000, FirstPivQuicksort Worst Case Trials: ,6,6,6,7,6,7,6,7,7,6
+seed: ,777, No. Items: ,6000, RandPivQuicksort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
+seed: ,777, No. Items: ,6000, MedianPivQuicksort Worst Case Trials: ,1,0,0,1,0,1,0,0,1,0
+seed: ,117, No. Items: ,1000, Mergesort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
+seed: ,117, No. Items: ,2500, Mergesort Worst Case Trials: ,0,0,0,0,0,0,0,1,0,0
+seed: ,117, No. Items: ,5000, Mergesort Worst Case Trials: ,0,0,0,0,0,0,1,0,0,0
+seed: ,117, No. Items: ,7500, Mergesort Worst Case Trials: ,0,0,1,0,0,0,0,0,1,0
+seed: ,117, No. Items: ,10000, Mergesort Worst Case Trials: ,0,0,1,0,0,1,0,0,0,1
+seed: ,117, No. Items: ,25000, Mergesort Worst Case Trials: ,0,1,1,0,1,1,0,1,6,1
+seed: ,117, No. Items: ,50000, Mergesort Worst Case Trials: ,2,1,1,2,1,2,1,2,2,1
+seed: ,117, No. Items: ,75000, Mergesort Worst Case Trials: ,2,3,2,2,2,2,2,3,2,2
+seed: ,117, No. Items: ,100000, Mergesort Worst Case Trials: ,4,3,3,3,4,3,3,3,4,3
+seed: ,117, No. Items: ,500000, Mergesort Worst Case Trials: ,19,18,18,18,18,18,18,16,17,17
+seed: ,117, No. Items: ,1000000, Mergesort Worst Case Trials: ,36,34,35,36,34,36,39,38,35,34
+seed: ,117, No. Items: ,2000000, Mergesort Worst Case Trials: ,69,69,71,76,79,87,80,79,80,80
 seed: ,2100, No. Items: ,1000, Mergesort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
-seed: ,2100, No. Items: ,2500, Mergesort Worst Case Trials: ,0,0,0,0,1,0,0,0,0,0
-seed: ,2100, No. Items: ,5000, Mergesort Worst Case Trials: ,0,0,0,1,0,0,0,0,0,1
-seed: ,2100, No. Items: ,7500, Mergesort Worst Case Trials: ,0,0,1,0,0,0,1,0,0,0
-seed: ,2100, No. Items: ,10000, Mergesort Worst Case Trials: ,1,0,0,1,0,0,1,0,0,1
-seed: ,2100, No. Items: ,25000, Mergesort Worst Case Trials: ,1,1,0,1,1,1,1,1,1,1
-seed: ,2100, No. Items: ,50000, Mergesort Worst Case Trials: ,1,1,2,2,2,2,2,2,2,2
-seed: ,2100, No. Items: ,75000, Mergesort Worst Case Trials: ,2,2,3,3,3,2,3,3,2,3
-seed: ,2100, No. Items: ,100000, Mergesort Worst Case Trials: ,4,4,3,4,3,3,3,4,4,4
-seed: ,2100, No. Items: ,500000, Mergesort Worst Case Trials: ,19,20,18,20,18,19,19,20,19,20
-seed: ,2100, No. Items: ,1000000, Mergesort Worst Case Trials: ,42,41,42,42,44,43,43,43,43,44
-seed: ,2100, No. Items: ,2000000, Mergesort Worst Case Trials: ,83,89,85,83,87,81,82,83,82,83
-seed: ,777, No. Items: ,1000, Mergesort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
+seed: ,2100, No. Items: ,2500, Mergesort Worst Case Trials: ,0,0,0,0,0,0,0,0,0,0
+seed: ,2100, No. Items: ,5000, Mergesort Worst Case Trials: ,0,1,0,0,0,0,0,1,0,0
+seed: ,2100, No. Items: ,7500, Mergesort Worst Case Trials: ,0,0,1,0,0,0,0,1,0,0
+seed: ,2100, No. Items: ,10000, Mergesort Worst Case Trials: ,0,1,0,0,1,0,0,1,0,0
+seed: ,2100, No. Items: ,25000, Mergesort Worst Case Trials: ,1,1,1,1,1,1,0,1,1,1
+seed: ,2100, No. Items: ,50000, Mergesort Worst Case Trials: ,1,1,2,2,2,1,2,2,1,2
+seed: ,2100, No. Items: ,75000, Mergesort Worst Case Trials: ,3,2,3,2,3,2,3,3,2,3
+seed: ,2100, No. Items: ,100000, Mergesort Worst Case Trials: ,3,3,3,3,3,3,4,3,3,3
+seed: ,2100, No. Items: ,500000, Mergesort Worst Case Trials: ,16,16,18,18,17,23,23,19,19,18
+seed: ,2100, No. Items: ,1000000, Mergesort Worst Case Trials: ,40,38,40,38,36,37,36,40,40,39
+seed: ,2100, No. Items: ,2000000, Mergesort Worst Case Trials: ,78,76,78,78,81,93,101,99,96,89
+seed: ,777, No. Items: ,1000, Mergesort Worst Case Trials: ,1,0,0,0,0,0,0,0,0,0
 seed: ,777, No. Items: ,2500, Mergesort Worst Case Trials: ,0,0,0,0,0,0,0,0,1,0
-seed: ,777, No. Items: ,5000, Mergesort Worst Case Trials: ,0,0,0,0,0,1,0,0,0,0
-seed: ,777, No. Items: ,7500, Mergesort Worst Case Trials: ,0,0,0,0,1,0,0,0,0,1
-seed: ,777, No. Items: ,10000, Mergesort Worst Case Trials: ,0,0,1,0,0,1,0,0,1,0
-seed: ,777, No. Items: ,25000, Mergesort Worst Case Trials: ,1,1,0,1,1,1,1,1,1,0
-seed: ,777, No. Items: ,50000, Mergesort Worst Case Trials: ,2,2,2,2,2,1,2,2,2,2
-seed: ,777, No. Items: ,75000, Mergesort Worst Case Trials: ,2,3,3,2,3,3,3,2,3,3
-seed: ,777, No. Items: ,100000, Mergesort Worst Case Trials: ,4,3,3,4,3,4,3,4,3,3
-seed: ,777, No. Items: ,500000, Mergesort Worst Case Trials: ,19,19,21,19,20,19,19,19,20,19
-seed: ,777, No. Items: ,1000000, Mergesort Worst Case Trials: ,46,45,46,44,41,44,41,44,51,58
-seed: ,777, No. Items: ,2000000, Mergesort Worst Case Trials: ,106,97,89,92,113,105,94,94,94,104
-seed: ,117, No. Items: ,1000, Bubble Worst Case Trials: ,68,1,2,0,0,0,1,1,1,1
-seed: ,117, No. Items: ,1000, Insertion Worst Case Trials:,7,7,1,1,0,0,0,0,0,1
-seed: ,117, No. Items: ,1000, SelectionSort Worst Case Trials: ,26,2,2,2,2,1,1,1,1,1
-seed: ,117, No. Items: ,2500, Bubble Worst Case Trials: ,2,3,3,2,2,2,2,3,2,2
-seed: ,117, No. Items: ,2500, Insertion Worst Case Trials:,2,1,1,2,2,2,2,2,2,2
-seed: ,117, No. Items: ,2500, SelectionSort Worst Case Trials: ,8,7,7,8,6,7,7,7,6,7
-seed: ,117, No. Items: ,5000, Bubble Worst Case Trials: ,9,9,11,9,9,8,9,9,9,9
-seed: ,117, No. Items: ,5000, Insertion Worst Case Trials:,5,6,6,6,5,5,5,5,4,5
-seed: ,117, No. Items: ,5000, SelectionSort Worst Case Trials: ,27,27,29,28,28,31,29,30,28,28
-seed: ,117, No. Items: ,7500, Bubble Worst Case Trials: ,20,21,29,19,20,20,20,20,21,23
-seed: ,117, No. Items: ,7500, Insertion Worst Case Trials:,10,10,14,10,12,12,13,13,14,14
-seed: ,117, No. Items: ,7500, SelectionSort Worst Case Trials: ,66,67,67,62,64,63,63,66,68,69
-seed: ,117, No. Items: ,10000, Bubble Worst Case Trials: ,39,38,38,35,34,37,35,37,34,33
-seed: ,117, No. Items: ,10000, Insertion Worst Case Trials:,26,25,24,23,23,24,22,22,22,22
-seed: ,117, No. Items: ,10000, SelectionSort Worst Case Trials: ,120,121,121,116,115,118,109,119,108,111
-seed: ,117, No. Items: ,25000, Bubble Worst Case Trials: ,226,224,199,205,196,234,211,201,201,199
-seed: ,117, No. Items: ,25000, Insertion Worst Case Trials:,142,162,130,134,129,144,134,132,130,132
-seed: ,117, No. Items: ,25000, SelectionSort Worst Case Trials: ,742,709,656,657,673,671,673,667,669,664
-seed: ,2100, No. Items: ,1000, Bubble Worst Case Trials: ,0,0,0,1,0,1,0,0,1,0
-seed: ,2100, No. Items: ,1000, Insertion Worst Case Trials:,0,0,0,0,0,0,0,0,0,0
-seed: ,2100, No. Items: ,1000, SelectionSort Worst Case Trials: ,1,1,1,1,1,1,1,1,1,2
-seed: ,2100, No. Items: ,2500, Bubble Worst Case Trials: ,2,2,2,2,2,2,2,2,2,2
-seed: ,2100, No. Items: ,2500, Insertion Worst Case Trials:,1,2,2,2,2,1,1,1,1,2
-seed: ,2100, No. Items: ,2500, SelectionSort Worst Case Trials: ,6,6,6,6,6,6,7,7,6,6
-seed: ,2100, No. Items: ,5000, Bubble Worst Case Trials: ,9,8,9,8,9,9,9,8,9,8
-seed: ,2100, No. Items: ,5000, Insertion Worst Case Trials:,5,5,5,6,5,5,5,6,5,5
-seed: ,2100, No. Items: ,5000, SelectionSort Worst Case Trials: ,25,26,26,26,26,25,27,27,27,26
-seed: ,2100, No. Items: ,7500, Bubble Worst Case Trials: ,19,19,17,18,19,19,17,18,19,18
-seed: ,2100, No. Items: ,7500, Insertion Worst Case Trials:,11,11,13,12,12,11,13,12,11,12
-seed: ,2100, No. Items: ,7500, SelectionSort Worst Case Trials: ,59,61,59,59,59,59,60,59,60,59
-seed: ,2100, No. Items: ,10000, Bubble Worst Case Trials: ,32,32,33,32,32,32,32,32,32,32
-seed: ,2100, No. Items: ,10000, Insertion Worst Case Trials:,21,20,21,21,21,21,21,21,21,21
-seed: ,2100, No. Items: ,10000, SelectionSort Worst Case Trials: ,104,106,105,104,104,104,104,103,106,105
-seed: ,2100, No. Items: ,25000, Bubble Worst Case Trials: ,196,203,198,201,201,202,199,200,199,197
-seed: ,2100, No. Items: ,25000, Insertion Worst Case Trials:,129,132,132,129,131,131,132,130,136,130
-seed: ,2100, No. Items: ,25000, SelectionSort Worst Case Trials: ,653,656,656,655,658,658,661,660,665,663
-seed: ,777, No. Items: ,1000, Bubble Worst Case Trials: ,1,0,0,1,0,0,1,0,0,0
-seed: ,777, No. Items: ,1000, Insertion Worst Case Trials:,0,1,0,0,1,0,0,1,0,1
-seed: ,777, No. Items: ,1000, SelectionSort Worst Case Trials: ,1,1,1,1,1,1,1,1,1,1
-seed: ,777, No. Items: ,2500, Bubble Worst Case Trials: ,2,3,2,2,2,2,2,1,2,2
-seed: ,777, No. Items: ,2500, Insertion Worst Case Trials:,1,1,1,1,1,1,1,1,2,1
-seed: ,777, No. Items: ,2500, SelectionSort Worst Case Trials: ,6,7,7,7,7,7,7,6,6,7
-seed: ,777, No. Items: ,5000, Bubble Worst Case Trials: ,9,9,8,8,8,9,9,9,8,8
-seed: ,777, No. Items: ,5000, Insertion Worst Case Trials:,5,5,5,5,5,5,5,5,5,5
-seed: ,777, No. Items: ,5000, SelectionSort Worst Case Trials: ,26,25,26,26,26,26,26,26,26,26
-seed: ,777, No. Items: ,7500, Bubble Worst Case Trials: ,18,18,18,19,19,18,18,18,17,18
-seed: ,777, No. Items: ,7500, Insertion Worst Case Trials:,12,12,11,13,11,12,12,12,12,11
-seed: ,777, No. Items: ,7500, SelectionSort Worst Case Trials: ,58,58,59,59,58,58,59,59,58,59
-seed: ,777, No. Items: ,10000, Bubble Worst Case Trials: ,32,32,31,33,32,31,33,32,32,31
-seed: ,777, No. Items: ,10000, Insertion Worst Case Trials:,21,21,21,21,21,21,21,21,20,21
-seed: ,777, No. Items: ,10000, SelectionSort Worst Case Trials: ,104,103,110,105,106,103,103,104,106,105
-seed: ,777, No. Items: ,25000, Bubble Worst Case Trials: ,202,200,201,198,198,198,199,200,197,197
-seed: ,777, No. Items: ,25000, Insertion Worst Case Trials:,130,131,130,130,133,131,131,131,132,132
-seed: ,777, No. Items: ,25000, SelectionSort Worst Case Trials: ,650,654,654,658,659,668,657,657,654,665
+seed: ,777, No. Items: ,5000, Mergesort Worst Case Trials: ,0,0,0,0,1,0,0,0,0,0
+seed: ,777, No. Items: ,7500, Mergesort Worst Case Trials: ,1,0,0,0,1,0,0,1,0,0
+seed: ,777, No. Items: ,10000, Mergesort Worst Case Trials: ,0,1,0,1,0,0,1,0,0,1
+seed: ,777, No. Items: ,25000, Mergesort Worst Case Trials: ,1,1,1,0,1,1,1,1,1,1
+seed: ,777, No. Items: ,50000, Mergesort Worst Case Trials: ,2,2,2,1,2,2,3,2,2,2
+seed: ,777, No. Items: ,75000, Mergesort Worst Case Trials: ,2,3,3,3,3,2,3,3,3,2
+seed: ,777, No. Items: ,100000, Mergesort Worst Case Trials: ,4,3,3,4,3,4,3,4,3,4
+seed: ,777, No. Items: ,500000, Mergesort Worst Case Trials: ,18,19,22,21,20,20,21,21,20,20
+seed: ,777, No. Items: ,1000000, Mergesort Worst Case Trials: ,43,46,45,40,41,40,41,41,42,39
+seed: ,777, No. Items: ,2000000, Mergesort Worst Case Trials: ,80,80,80,78,88,83,82,82,81,81
+seed: ,117, No. Items: ,1000, Bubble Worst Case Trials: ,1,1,1,1,1,0,1,1,1,0
+seed: ,117, No. Items: ,1000, Insertion Worst Case Trials:,0,0,0,0,0,1,0,0,0,1
+seed: ,117, No. Items: ,1000, SelectionSort Worst Case Trials: ,1,0,1,1,1,0,1,1,1,0
+seed: ,117, No. Items: ,2500, Bubble Worst Case Trials: ,4,5,5,5,5,4,5,4,5,5
+seed: ,117, No. Items: ,2500, Insertion Worst Case Trials:,1,1,1,1,1,1,1,1,1,1
+seed: ,117, No. Items: ,2500, SelectionSort Worst Case Trials: ,3,3,3,3,3,3,3,3,3,3
+seed: ,117, No. Items: ,5000, Bubble Worst Case Trials: ,18,18,16,16,17,17,16,16,16,16
+seed: ,117, No. Items: ,5000, Insertion Worst Case Trials:,4,3,3,3,4,3,3,3,3,3
+seed: ,117, No. Items: ,5000, SelectionSort Worst Case Trials: ,13,11,11,11,12,11,11,11,11,11
+seed: ,117, No. Items: ,7500, Bubble Worst Case Trials: ,36,36,36,35,36,36,36,35,36,36
+seed: ,117, No. Items: ,7500, Insertion Worst Case Trials:,7,8,7,8,7,7,8,7,7,8
+seed: ,117, No. Items: ,7500, SelectionSort Worst Case Trials: ,24,24,24,24,24,24,24,25,25,27
+seed: ,117, No. Items: ,10000, Bubble Worst Case Trials: ,69,63,64,64,66,63,64,64,65,63
+seed: ,117, No. Items: ,10000, Insertion Worst Case Trials:,14,14,14,14,14,15,14,13,15,14
+seed: ,117, No. Items: ,10000, SelectionSort Worst Case Trials: ,43,43,45,43,43,46,43,44,43,42
+seed: ,117, No. Items: ,25000, Bubble Worst Case Trials: ,401,400,405,413,399,396,398,398,398,399
+seed: ,117, No. Items: ,25000, Insertion Worst Case Trials:,94,95,93,95,93,95,94,98,95,96
+seed: ,117, No. Items: ,25000, SelectionSort Worst Case Trials: ,269,268,277,279,267,277,267,268,268,268
+seed: ,2100, No. Items: ,1000, Bubble Worst Case Trials: ,1,1,0,0,1,1,0,0,1,1
+seed: ,2100, No. Items: ,1000, Insertion Worst Case Trials:,0,0,0,1,0,0,0,1,0,0
+seed: ,2100, No. Items: ,1000, SelectionSort Worst Case Trials: ,0,1,1,0,0,1,1,0,0,0
+seed: ,2100, No. Items: ,2500, Bubble Worst Case Trials: ,3,4,4,4,4,4,4,4,4,4
+seed: ,2100, No. Items: ,2500, Insertion Worst Case Trials:,0,1,0,1,0,1,0,1,1,1
+seed: ,2100, No. Items: ,2500, SelectionSort Worst Case Trials: ,3,3,3,3,3,3,3,3,2,3
+seed: ,2100, No. Items: ,5000, Bubble Worst Case Trials: ,16,16,16,16,19,18,16,16,16,16
+seed: ,2100, No. Items: ,5000, Insertion Worst Case Trials:,3,3,3,3,4,4,3,3,3,3
+seed: ,2100, No. Items: ,5000, SelectionSort Worst Case Trials: ,11,11,11,13,12,11,11,11,11,11
+seed: ,2100, No. Items: ,7500, Bubble Worst Case Trials: ,36,36,36,36,36,35,36,36,36,36
+seed: ,2100, No. Items: ,7500, Insertion Worst Case Trials:,7,8,7,7,8,8,8,7,8,7
+seed: ,2100, No. Items: ,7500, SelectionSort Worst Case Trials: ,24,24,24,27,24,24,24,24,24,25
+seed: ,2100, No. Items: ,10000, Bubble Worst Case Trials: ,63,64,66,63,64,63,63,63,63,63
+seed: ,2100, No. Items: ,10000, Insertion Worst Case Trials:,14,14,14,14,14,14,13,13,14,14
+seed: ,2100, No. Items: ,10000, SelectionSort Worst Case Trials: ,42,45,43,42,42,43,43,44,42,42
+seed: ,2100, No. Items: ,25000, Bubble Worst Case Trials: ,415,395,396,394,396,395,396,396,396,398
+seed: ,2100, No. Items: ,25000, Insertion Worst Case Trials:,115,94,94,98,94,94,96,94,94,95
+seed: ,2100, No. Items: ,25000, SelectionSort Worst Case Trials: ,269,269,268,269,268,268,268,266,267,266
+seed: ,777, No. Items: ,1000, Bubble Worst Case Trials: ,1,1,0,0,1,1,1,0,0,1
+seed: ,777, No. Items: ,1000, Insertion Worst Case Trials:,0,0,0,1,0,0,0,0,1,0
+seed: ,777, No. Items: ,1000, SelectionSort Worst Case Trials: ,0,1,1,0,0,0,1,1,0,0
+seed: ,777, No. Items: ,2500, Bubble Worst Case Trials: ,4,4,4,4,4,4,4,4,4,4
+seed: ,777, No. Items: ,2500, Insertion Worst Case Trials:,1,1,1,1,1,0,1,1,1,0
+seed: ,777, No. Items: ,2500, SelectionSort Worst Case Trials: ,3,2,3,2,3,3,3,2,3,3
+seed: ,777, No. Items: ,5000, Bubble Worst Case Trials: ,16,16,15,16,16,16,16,16,15,16
+seed: ,777, No. Items: ,5000, Insertion Worst Case Trials:,3,3,4,3,3,3,3,3,4,3
+seed: ,777, No. Items: ,5000, SelectionSort Worst Case Trials: ,11,12,10,10,10,11,11,11,10,11
+seed: ,777, No. Items: ,7500, Bubble Worst Case Trials: ,35,36,35,35,35,35,35,36,36,35
+seed: ,777, No. Items: ,7500, Insertion Worst Case Trials:,7,7,7,7,8,8,7,7,8,8
+seed: ,777, No. Items: ,7500, SelectionSort Worst Case Trials: ,24,24,25,24,25,24,24,25,24,24
+seed: ,777, No. Items: ,10000, Bubble Worst Case Trials: ,63,64,63,65,63,64,64,63,62,63
+seed: ,777, No. Items: ,10000, Insertion Worst Case Trials:,15,14,14,14,14,14,13,14,14,14
+seed: ,777, No. Items: ,10000, SelectionSort Worst Case Trials: ,42,42,43,44,44,43,43,43,43,43
+seed: ,777, No. Items: ,25000, Bubble Worst Case Trials: ,392,413,394,393,392,395,398,399,394,399
+seed: ,777, No. Items: ,25000, Insertion Worst Case Trials:,94,94,94,93,94,95,95,94,93,95
+seed: ,777, No. Items: ,25000, SelectionSort Worst Case Trials: ,270,267,266,267,266,272,274,268,268,270

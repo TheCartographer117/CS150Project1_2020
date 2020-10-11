@@ -14,12 +14,12 @@ public class DataCollector extends ExperimentController {
      */
     public static void main (String [] args) {
         DataCollector controller = new DataCollector();
-        //controller.compareAllSortsSortedInts(); 
-        //controller.compareAllSortsRandInts();
-        //controller.compareAllSortsWorstCaseInts();
-        //controller.compareAllSortsSortedStrings();
-        //controller.compareAllSortsRandStrings();
-        //controller.compareAllSortsWorstCaseStrings();
+        controller.compareAllSortsSortedInts(); 
+        controller.compareAllSortsRandInts();
+        controller.compareAllSortsWorstCaseInts();
+        controller.compareAllSortsSortedStrings();
+        controller.compareAllSortsRandStrings();
+        controller.compareAllSortsWorstCaseStrings();
         controller.compareEffecientSortsSorted(); 
         
         //controller.timeSortSortedInts(6000, 117, new MergeSort());
