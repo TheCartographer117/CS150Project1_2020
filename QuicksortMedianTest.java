@@ -42,9 +42,9 @@ public class QuicksortMedianTest
     public void testQuickMedianIntsRand()
     {
         QuicksortMedian quickMe1 = new QuicksortMedian();
-        int [] intArray = {3,5,2,4,1};
+        int [] intArray = {3,5,2,4,1,7,8,6,9,10};
         quickMe1.sort(intArray);
-        String solution = "1,2,3,4,5,";
+        String solution = "1,2,3,4,5,6,7,8,9,10,";
         String output = new String();
         for (int i = 0; i < intArray.length; i ++) {
             output = output + "" + intArray[i] + ",";
@@ -57,9 +57,9 @@ public class QuicksortMedianTest
     public void testQuickMedianIntsSorted()
     {
         QuicksortMedian quickMe1 = new QuicksortMedian();
-        int [] intArray = {1,2,3,4,5};
+        int [] intArray = {1,2,3,4,5,6,7,8,9,10};
         quickMe1.sort(intArray);
-        String solution = "1,2,3,4,5,";
+        String solution = "1,2,3,4,5,6,7,8,9,10,";
         String output = new String();
         for (int i = 0; i < intArray.length; i ++) {
             output = output + "" + intArray[i] + ",";
@@ -72,9 +72,9 @@ public class QuicksortMedianTest
     public void testQuickMedianIntsWorst()
     {
         QuicksortMedian quickMe1 = new QuicksortMedian();
-        int [] intArray = {5,4,3,2,1};
+        int [] intArray = {10,9,8,7,6,5,4,3,2,1};
         quickMe1.sort(intArray);
-        String solution = "1,2,3,4,5,";
+        String solution = "1,2,3,4,5,6,7,8,9,10,";
         String output = new String();
         for (int i = 0; i < intArray.length; i ++) {
             output = output + "" + intArray[i] + ",";

@@ -27,22 +27,14 @@ public abstract class Quicksort implements Sorter {
      * @param   lst last element of the subarray
      */
     private void qSort (int[] a, int fst, int lst) {
-        ///*
-        if (fst + 2 > lst) {
+        if (fst + 2 > lst) { //Use a cutoff to handle small subarrays
             insertionSort(a, fst, lst);
         } else {
-            int pivot = findPivot(a, fst, lst);
-            int pivIndex = partition(a, pivot, fst, lst);
-            qSort(a, fst, pivIndex-1);
+            int pivot = findPivot(a, fst, lst); // find the pivot value
+            int pivIndex = partition(a, pivot, fst, lst); // partition the array around the pivot
+            qSort(a, fst, pivIndex-1); //recursive calls
             qSort(a, pivIndex+1, lst); 
         }
-        //*/
-        /*
-        if (fst < lst) {
-        int pivIndex = partition(a, fst, lst);
-        qSort(a, fst, pivIndex-1);
-        qSort(a, pivIndex+1, lst); 
-        } */
     }
 
     /**
@@ -127,12 +119,6 @@ public abstract class Quicksort implements Sorter {
             qSort(a, fst, pivIndex-1);
             qSort(a, pivIndex+1, lst); 
         }
-        /*
-        if (fst < lst) {
-        int pivIndex = partition(a, fst, lst);
-        qSort(a, fst, pivIndex-1);
-        qSort(a, pivIndex+1, lst); 
-        } */
     }
 
     /**
@@ -293,7 +279,7 @@ public abstract class Quicksort implements Sorter {
         a[idx1] = a[idx2];
         a[idx2] = tmp;
     }
-    // CITE THIS IN THE LAB NOTES
+    // Citation in notes
     // https://users.cs.fiu.edu/~weiss/dsj3/code/Sort.java
 
     /**
@@ -308,6 +294,6 @@ public abstract class Quicksort implements Sorter {
         a[idx1] = a[idx2];
         a[idx2] = tmp;
     }
-    // CITE THIS IN THE LAB NOTES
+    // Citation in notes
     // https://users.cs.fiu.edu/~weiss/dsj3/code/Sort.java
 }

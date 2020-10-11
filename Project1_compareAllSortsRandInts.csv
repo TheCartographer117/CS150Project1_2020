@@ -1,0 +1,132 @@
+seed: ,117, No. Items: ,1000, FirstPivQuicksort Random Trials: ,3,0,0,0,0,0,0,1,0,0
+seed: ,117, No. Items: ,1000, RandPivQuicksort Random Trials: ,0,1,0,0,0,0,0,0,0,0
+seed: ,117, No. Items: ,1000, MedianPivQuicksort Random Trials: ,1,0,0,0,0,0,0,0,0,0
+seed: ,117, No. Items: ,2500, FirstPivQuicksort Random Trials: ,0,0,0,0,0,0,0,1,0,0
+seed: ,117, No. Items: ,2500, RandPivQuicksort Random Trials: ,0,0,0,0,0,0,0,0,1,0
+seed: ,117, No. Items: ,2500, MedianPivQuicksort Random Trials: ,0,0,0,0,0,1,0,0,0,1
+seed: ,117, No. Items: ,5000, FirstPivQuicksort Random Trials: ,0,1,0,1,0,1,1,1,0,1
+seed: ,117, No. Items: ,5000, RandPivQuicksort Random Trials: ,0,0,1,0,1,1,1,0,1,0
+seed: ,117, No. Items: ,5000, MedianPivQuicksort Random Trials: ,0,1,0,1,0,0,0,1,0,1
+seed: ,117, No. Items: ,6000, FirstPivQuicksort Random Trials: ,0,0,0,0,1,1,1,0,0,0
+seed: ,117, No. Items: ,6000, RandPivQuicksort Random Trials: ,0,1,1,1,0,0,0,0,1,1
+seed: ,117, No. Items: ,6000, MedianPivQuicksort Random Trials: ,1,1,0,0,0,1,1,1,1,0
+seed: ,2100, No. Items: ,1000, FirstPivQuicksort Random Trials: ,0,0,0,0,0,0,0,0,0,0
+seed: ,2100, No. Items: ,1000, RandPivQuicksort Random Trials: ,1,0,0,0,0,0,0,0,0,0
+seed: ,2100, No. Items: ,1000, MedianPivQuicksort Random Trials: ,0,0,0,1,0,0,0,0,0,0
+seed: ,2100, No. Items: ,2500, FirstPivQuicksort Random Trials: ,0,0,0,1,0,0,1,0,0,0
+seed: ,2100, No. Items: ,2500, RandPivQuicksort Random Trials: ,1,0,0,0,0,0,0,1,0,0
+seed: ,2100, No. Items: ,2500, MedianPivQuicksort Random Trials: ,0,1,0,0,1,0,0,0,1,0
+seed: ,2100, No. Items: ,5000, FirstPivQuicksort Random Trials: ,0,0,6,6,6,1,0,0,0,1
+seed: ,2100, No. Items: ,5000, RandPivQuicksort Random Trials: ,0,6,7,7,6,0,0,0,1,0
+seed: ,2100, No. Items: ,5000, MedianPivQuicksort Random Trials: ,0,6,6,7,3,0,1,1,0,1
+seed: ,2100, No. Items: ,6000, FirstPivQuicksort Random Trials: ,0,1,1,1,0,0,1,0,1,0
+seed: ,2100, No. Items: ,6000, RandPivQuicksort Random Trials: ,1,1,1,0,1,1,0,1,0,1
+seed: ,2100, No. Items: ,6000, MedianPivQuicksort Random Trials: ,0,0,0,1,0,0,1,0,1,1
+seed: ,777, No. Items: ,1000, FirstPivQuicksort Random Trials: ,0,0,0,0,0,0,0,0,0,0
+seed: ,777, No. Items: ,1000, RandPivQuicksort Random Trials: ,0,0,0,0,0,0,0,0,0,0
+seed: ,777, No. Items: ,1000, MedianPivQuicksort Random Trials: ,0,0,0,1,0,0,0,0,0,0
+seed: ,777, No. Items: ,2500, FirstPivQuicksort Random Trials: ,0,0,0,1,0,0,0,0,0,0
+seed: ,777, No. Items: ,2500, RandPivQuicksort Random Trials: ,1,0,0,0,0,0,1,0,0,1
+seed: ,777, No. Items: ,2500, MedianPivQuicksort Random Trials: ,0,0,0,0,1,0,0,1,0,0
+seed: ,777, No. Items: ,5000, FirstPivQuicksort Random Trials: ,0,1,0,0,1,1,0,0,1,0
+seed: ,777, No. Items: ,5000, RandPivQuicksort Random Trials: ,1,0,0,1,0,0,1,1,0,0
+seed: ,777, No. Items: ,5000, MedianPivQuicksort Random Trials: ,0,0,1,0,0,1,0,0,0,1
+seed: ,777, No. Items: ,6000, FirstPivQuicksort Random Trials: ,0,1,0,1,1,1,0,1,0,1
+seed: ,777, No. Items: ,6000, RandPivQuicksort Random Trials: ,1,0,1,1,1,0,1,0,1,0
+seed: ,777, No. Items: ,6000, MedianPivQuicksort Random Trials: ,0,1,0,0,0,1,0,1,0,0
+seed: ,117, No. Items: ,1000, Mergesort Random Trials: ,2,0,0,0,0,1,0,0,0,0
+seed: ,117, No. Items: ,2500, Mergesort Random Trials: ,1,0,1,0,0,1,0,1,0,0
+seed: ,117, No. Items: ,5000, Mergesort Random Trials: ,1,1,1,0,1,0,1,1,0,1
+seed: ,117, No. Items: ,7500, Mergesort Random Trials: ,1,1,0,1,1,1,1,1,0,1
+seed: ,117, No. Items: ,10000, Mergesort Random Trials: ,1,1,1,0,1,1,1,1,1,1
+seed: ,117, No. Items: ,25000, Mergesort Random Trials: ,2,2,2,3,2,2,3,2,2,2
+seed: ,117, No. Items: ,50000, Mergesort Random Trials: ,5,5,4,5,5,5,5,5,5,5
+seed: ,117, No. Items: ,75000, Mergesort Random Trials: ,8,7,7,8,8,7,8,8,7,8
+seed: ,117, No. Items: ,100000, Mergesort Random Trials: ,10,10,11,11,11,11,12,11,11,11
+seed: ,117, No. Items: ,500000, Mergesort Random Trials: ,57,58,74,69,62,62,61,60,55,55
+seed: ,117, No. Items: ,1000000, Mergesort Random Trials: ,116,113,114,112,108,106,109,107,105,107
+seed: ,117, No. Items: ,2000000, Mergesort Random Trials: ,251,243,239,243,242,233,231,228,216,215
+seed: ,2100, No. Items: ,1000, Mergesort Random Trials: ,0,0,0,1,0,0,0,0,0,0
+seed: ,2100, No. Items: ,2500, Mergesort Random Trials: ,0,1,0,0,0,1,0,0,0,1
+seed: ,2100, No. Items: ,5000, Mergesort Random Trials: ,0,1,0,1,0,1,0,1,0,1
+seed: ,2100, No. Items: ,7500, Mergesort Random Trials: ,1,0,1,1,1,0,1,1,1,0
+seed: ,2100, No. Items: ,10000, Mergesort Random Trials: ,1,1,1,0,0,0,0,0,1,1
+seed: ,2100, No. Items: ,25000, Mergesort Random Trials: ,2,2,3,2,3,3,2,2,2,2
+seed: ,2100, No. Items: ,50000, Mergesort Random Trials: ,5,5,4,5,5,5,4,5,5,5
+seed: ,2100, No. Items: ,75000, Mergesort Random Trials: ,8,7,7,7,8,7,8,8,9,7
+seed: ,2100, No. Items: ,100000, Mergesort Random Trials: ,11,10,10,10,11,9,10,9,10,10
+seed: ,2100, No. Items: ,500000, Mergesort Random Trials: ,49,54,61,63,61,53,54,52,53,53
+seed: ,2100, No. Items: ,1000000, Mergesort Random Trials: ,104,108,114,115,106,110,105,107,105,105
+seed: ,2100, No. Items: ,2000000, Mergesort Random Trials: ,214,222,220,215,219,219,218,236,216,226
+seed: ,777, No. Items: ,1000, Mergesort Random Trials: ,1,0,0,0,0,0,0,0,0,0
+seed: ,777, No. Items: ,2500, Mergesort Random Trials: ,1,0,0,0,1,0,0,0,0,0
+seed: ,777, No. Items: ,5000, Mergesort Random Trials: ,1,0,1,1,0,1,1,0,1,0
+seed: ,777, No. Items: ,7500, Mergesort Random Trials: ,1,1,1,1,0,0,0,0,1,1
+seed: ,777, No. Items: ,10000, Mergesort Random Trials: ,1,1,1,1,1,1,1,1,1,1
+seed: ,777, No. Items: ,25000, Mergesort Random Trials: ,3,2,3,3,3,3,3,3,3,3
+seed: ,777, No. Items: ,50000, Mergesort Random Trials: ,6,6,5,5,5,5,5,6,5,5
+seed: ,777, No. Items: ,75000, Mergesort Random Trials: ,7,7,8,7,7,7,7,7,7,7
+seed: ,777, No. Items: ,100000, Mergesort Random Trials: ,10,10,10,10,9,10,10,9,11,10
+seed: ,777, No. Items: ,500000, Mergesort Random Trials: ,51,52,50,50,51,52,51,51,51,51
+seed: ,777, No. Items: ,1000000, Mergesort Random Trials: ,104,107,105,108,107,105,105,105,105,104
+seed: ,777, No. Items: ,2000000, Mergesort Random Trials: ,219,213,214,215,213,216,213,219,216,213
+seed: ,117, No. Items: ,1000, Insertion Random Trials:,3,4,1,0,0,0,1,1,0,1
+seed: ,117, No. Items: ,1000, SelectionSort Random Trials: ,20,1,2,2,1,0,0,0,0,0
+seed: ,117, No. Items: ,2500, Insertion Random Trials:,2,2,2,1,1,1,1,1,1,1
+seed: ,117, No. Items: ,2500, SelectionSort Random Trials: ,1,1,1,2,2,2,2,2,2,2
+seed: ,117, No. Items: ,5000, Insertion Random Trials:,4,4,4,5,5,4,3,4,3,3
+seed: ,117, No. Items: ,5000, SelectionSort Random Trials: ,7,6,6,6,6,6,7,6,7,6
+seed: ,117, No. Items: ,7500, Insertion Random Trials:,8,7,8,7,5,6,5,5,5,5
+seed: ,117, No. Items: ,7500, SelectionSort Random Trials: ,14,14,14,13,14,13,14,14,14,14
+seed: ,117, No. Items: ,10000, Insertion Random Trials:,9,10,10,9,10,9,9,11,9,9
+seed: ,117, No. Items: ,10000, SelectionSort Random Trials: ,24,24,24,24,24,24,25,26,26,25
+seed: ,117, No. Items: ,25000, Insertion Random Trials:,58,58,58,58,58,58,59,70,63,61
+seed: ,117, No. Items: ,25000, SelectionSort Random Trials: ,152,149,147,151,167,158,162,176,162,157
+seed: ,117, No. Items: ,50000, Insertion Random Trials:,226,230,235,231,230,232,231,227,234,235
+seed: ,117, No. Items: ,50000, SelectionSort Random Trials: ,604,605,609,604,606,605,605,602,600,606
+seed: ,2100, No. Items: ,1000, Insertion Random Trials:,0,0,1,0,0,0,0,0,0,0
+seed: ,2100, No. Items: ,1000, SelectionSort Random Trials: ,0,0,0,0,1,0,0,0,0,1
+seed: ,2100, No. Items: ,2500, Insertion Random Trials:,0,1,0,0,1,1,0,1,1,1
+seed: ,2100, No. Items: ,2500, SelectionSort Random Trials: ,2,2,2,2,1,2,2,1,1,2
+seed: ,2100, No. Items: ,5000, Insertion Random Trials:,2,2,3,2,2,3,2,3,2,2
+seed: ,2100, No. Items: ,5000, SelectionSort Random Trials: ,6,6,6,7,6,6,6,6,6,6
+seed: ,2100, No. Items: ,7500, Insertion Random Trials:,5,6,5,5,5,5,6,5,5,6
+seed: ,2100, No. Items: ,7500, SelectionSort Random Trials: ,13,14,14,15,14,14,13,13,13,13
+seed: ,2100, No. Items: ,10000, Insertion Random Trials:,9,10,9,9,9,9,9,9,9,9
+seed: ,2100, No. Items: ,10000, SelectionSort Random Trials: ,24,25,25,24,25,25,24,25,24,24
+seed: ,2100, No. Items: ,25000, Insertion Random Trials:,58,58,58,57,58,58,57,58,60,58
+seed: ,2100, No. Items: ,25000, SelectionSort Random Trials: ,153,149,151,152,151,152,150,151,151,150
+seed: ,2100, No. Items: ,50000, Insertion Random Trials:,234,235,234,235,235,232,242,233,231,231
+seed: ,2100, No. Items: ,50000, SelectionSort Random Trials: ,606,612,609,604,610,605,606,612,599,601
+seed: ,777, No. Items: ,1000, Insertion Random Trials:,0,0,0,0,0,0,0,0,0,0
+seed: ,777, No. Items: ,1000, SelectionSort Random Trials: ,0,0,1,0,1,0,0,1,0,1
+seed: ,777, No. Items: ,2500, Insertion Random Trials:,0,0,1,0,1,1,1,0,0,1
+seed: ,777, No. Items: ,2500, SelectionSort Random Trials: ,2,2,2,2,1,1,2,2,2,1
+seed: ,777, No. Items: ,5000, Insertion Random Trials:,2,3,3,2,2,2,2,2,2,2
+seed: ,777, No. Items: ,5000, SelectionSort Random Trials: ,6,6,6,6,7,7,6,7,6,6
+seed: ,777, No. Items: ,7500, Insertion Random Trials:,5,5,5,5,5,5,6,5,5,5
+seed: ,777, No. Items: ,7500, SelectionSort Random Trials: ,14,14,15,14,14,14,14,14,14,14
+seed: ,777, No. Items: ,10000, Insertion Random Trials:,9,9,9,10,9,9,9,9,9,9
+seed: ,777, No. Items: ,10000, SelectionSort Random Trials: ,24,24,24,24,24,23,25,25,24,24
+seed: ,777, No. Items: ,25000, Insertion Random Trials:,58,57,58,58,57,57,58,51,50,53
+seed: ,777, No. Items: ,25000, SelectionSort Random Trials: ,150,150,152,149,152,148,144,133,135,135
+seed: ,777, No. Items: ,50000, Insertion Random Trials:,204,232,231,228,231,237,231,232,228,234
+seed: ,777, No. Items: ,50000, SelectionSort Random Trials: ,581,596,605,601,609,604,601,637,605,600
+seed: ,117, No. Items: ,1000, Bubble Random Trials: ,51,2,3,1,1,2,1,1,2,1
+seed: ,117, No. Items: ,2500, Bubble Random Trials: ,8,9,8,8,9,7,9,8,8,8
+seed: ,117, No. Items: ,5000, Bubble Random Trials: ,37,39,39,40,39,36,36,36,36,36
+seed: ,117, No. Items: ,7500, Bubble Random Trials: ,91,93,91,89,92,91,92,96,92,91
+seed: ,117, No. Items: ,10000, Bubble Random Trials: ,176,175,170,174,175,174,177,176,176,180
+seed: ,117, No. Items: ,25000, Bubble Random Trials: ,1271,1270,1312,1287,1265,1270,1266,1268,1265,1277
+seed: ,2100, No. Items: ,1000, Bubble Random Trials: ,2,1,1,2,1,2,1,1,2,1
+seed: ,2100, No. Items: ,2500, Bubble Random Trials: ,8,8,9,8,8,8,9,8,8,9
+seed: ,2100, No. Items: ,5000, Bubble Random Trials: ,36,37,37,38,37,37,37,36,36,36
+seed: ,2100, No. Items: ,7500, Bubble Random Trials: ,92,90,91,92,91,91,91,103,103,91
+seed: ,2100, No. Items: ,10000, Bubble Random Trials: ,174,176,176,176,176,176,173,179,173,176
+seed: ,2100, No. Items: ,25000, Bubble Random Trials: ,1275,1292,1365,1283,1278,1282,1292,1280,1283,1293
+seed: ,777, No. Items: ,1000, Bubble Random Trials: ,1,1,2,1,2,1,2,1,1,2
+seed: ,777, No. Items: ,2500, Bubble Random Trials: ,8,8,8,8,8,8,9,8,9,8
+seed: ,777, No. Items: ,5000, Bubble Random Trials: ,37,39,38,36,37,36,37,36,36,36
+seed: ,777, No. Items: ,7500, Bubble Random Trials: ,93,93,93,92,92,92,91,94,98,91
+seed: ,777, No. Items: ,10000, Bubble Random Trials: ,180,178,177,178,178,176,178,177,177,176
+seed: ,777, No. Items: ,25000, Bubble Random Trials: ,1270,1284,1268,1274,1271,1285,1381,1285,1295,1304

@@ -42,9 +42,9 @@ public class BubbleSortTest
     public void testBubbleIntsRand()
     {
         BubbleSort bubbleSo1 = new BubbleSort();
-        int [] intArray = {3,5,2,4,1};
+        int [] intArray = {3,5,2,4,1,7,8,6,9,10};
         bubbleSo1.sort(intArray);
-        String solution = "1,2,3,4,5,";
+        String solution = "1,2,3,4,5,6,7,8,9,10,";;
         String output = new String();
         for (int i = 0; i < intArray.length; i ++) {
             output = output + "" + intArray[i] + ",";

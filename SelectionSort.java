@@ -13,11 +13,11 @@ public class SelectionSort implements Sorter {
      */ 
     public void sort (int[] a) {
         int n = a.length;
-        for (int fill = 0; fill < n-1; fill++) {
+        for (int fill = 0; fill < n-1; fill++) { //perform a "pass"
             int posMin = fill;
-            for (int next = fill+1; next < n; next++)
+            for (int next = fill+1; next < n; next++) // look for minimum value
                 if (a[next] < a[posMin]) posMin = next;
-            int tmp = a[fill];
+            int tmp = a[fill]; //swap the smallest item with the location it should be at
             a[fill] = a[posMin];
             a[posMin] = tmp;
         }
@@ -31,11 +31,11 @@ public class SelectionSort implements Sorter {
      */ 
     public <T extends Comparable<? super T>> void sort (T[] a) {
         int n = a.length;
-        for (int fill = 0; fill < n-1; fill++) {
+        for (int fill = 0; fill < n-1; fill++) { //perform a "pass"
             int posMin = fill;
-            for (int nxt = fill+1; nxt < n; nxt++)
+            for (int nxt = fill+1; nxt < n; nxt++) // look for minimum value
                 if (a[nxt].compareTo(a[posMin])<0) posMin = nxt;
-            T tmp = a[fill];
+            T tmp = a[fill]; //swap the smallest item with the location it should be at
             a[fill] = a[posMin];
             a[posMin] = tmp;
         }
@@ -49,11 +49,11 @@ public class SelectionSort implements Sorter {
      */ 
     public <T> void sort (T[] a, Comparator<T> c) {
         int n = a.length;
-        for (int fill = 0; fill < n-1; fill++) {
+        for (int fill = 0; fill < n-1; fill++) { //perform a "pass"
             int posMin = fill;
-            for (int nxt = fill+1; nxt < n; nxt++)
+            for (int nxt = fill+1; nxt < n; nxt++) // look for minimum value
                 if (c.compare(a[nxt], a[posMin])<0) posMin = nxt;
-            T tmp = a[fill];
+            T tmp = a[fill]; //swap the smallest item with the location it should be at
             a[fill] = a[posMin];
             a[posMin] = tmp;
         }

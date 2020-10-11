@@ -14,7 +14,7 @@ public class InsertionSort implements Sorter {
      */ 
     public void sort (int[] a) {
         for (int nextPos = 1; nextPos < a.length; nextPos++) {
-            insert(a, nextPos);
+            insert(a, nextPos); 
         }
     }
 

@@ -23,13 +23,13 @@ public class MergeSort implements Sorter {
      * @param   end the end of the array being sorted
      */
     public void sort (int[] a, int start, int end) { 
-        if (start >= end) return;
+        if (start >= end) return; // terminates loop if subarray is of length 1
 
-        int half = (start+end) / 2;
-        sort(a, start, half);
+        int half = (start+end) / 2; 
+        sort(a, start, half); //split array into two halves and sort each half recursively
         sort(a, half+1, end);
 
-        merge(a, start, half, end);
+        merge(a, start, half, end); //merge the two sorted halves
     }
 
     /**
@@ -41,7 +41,7 @@ public class MergeSort implements Sorter {
      * @param   end         the end of the array being sorted
      */
     private void merge(int[] a, int start, int half, int end) { 
-        int[] b = Arrays.copyOfRange(a, start, half+1); 
+        int[] b = Arrays.copyOfRange(a, start, half+1); // requires more space
         int i = 0; //index in b
         int j = half+1; // index in second half of a 
         int k = start; // index in merged a
@@ -50,7 +50,7 @@ public class MergeSort implements Sorter {
                 a[k++] = b[i++]; 
             else
                 a[k++] = a[j++];
-        while (i < b.length) a[k++] = b[i++]; 
+        while (i < b.length) a[k++] = b[i++]; // copies remaining elements of array if they exist
     } 
     
     /**
@@ -70,13 +70,13 @@ public class MergeSort implements Sorter {
      * @param   end the end of the array being sorted
      */
     public static <T extends Comparable<? super T>> void sort (T[] a, int start, int end) { 
-        if (start >= end) return;
+        if (start >= end) return; // terminates loop if subarray is of length 1
 
         int half = (start+end) / 2;
-        sort(a, start, half);
+        sort(a, start, half); //split array into two halves and sort each half recursively
         sort(a, half+1, end);
 
-        merge(a, start, half, end);
+        merge(a, start, half, end); //merge the two sorted halves
     }
 
     /**
@@ -88,7 +88,7 @@ public class MergeSort implements Sorter {
      * @param   end         the end of the array being sorted
      */
     private static <T extends Comparable<? super T>> void merge(T[] a, int start, int half, int end) { 
-        T[] b = Arrays.copyOfRange(a, start, half+1); 
+        T[] b = Arrays.copyOfRange(a, start, half+1); // requires more space
         int i = 0; //index in b
         int j = half+1; // index in second half of a 
         int k = start; // index in merged a
@@ -97,7 +97,7 @@ public class MergeSort implements Sorter {
                 a[k++] = b[i++]; 
             else
                 a[k++] = a[j++];
-        while (i < b.length) a[k++] = b[i++]; 
+        while (i < b.length) a[k++] = b[i++]; // copies remaining elements of array if they exist
     }
     
     /**
@@ -119,13 +119,13 @@ public class MergeSort implements Sorter {
      * @param   c    a comparator object
      */
     public <T> void sort (T[] a, int start, int end, Comparator<T> c) { 
-        if (start >= end) return;
+        if (start >= end) return; // terminates loop if subarray is of length 1
 
         int half = (start+end) / 2;
-        sort(a, start, half, c);
+        sort(a, start, half, c); //split array into two halves and sort each half recursively
         sort(a, half+1, end, c);
 
-        merge(a, start, half, end, c);
+        merge(a, start, half, end, c); //merge the two sorted halves
     }
 
     /**
@@ -138,7 +138,7 @@ public class MergeSort implements Sorter {
      * @param   c           a comparator object
      */
     private <T> void merge(T[] a, int start, int half, int end, Comparator<T> c) { 
-        T[] b = Arrays.copyOfRange(a, start, half+1); 
+        T[] b = Arrays.copyOfRange(a, start, half+1); // requires more space
         int i = 0; //index in b
         int j = half+1; // index in second half of a 
         int k = start; // index in merged a
@@ -147,7 +147,7 @@ public class MergeSort implements Sorter {
                 a[k++] = b[i++]; 
             else
                 a[k++] = a[j++];
-        while (i < b.length) a[k++] = b[i++]; 
+        while (i < b.length) a[k++] = b[i++]; // copies remaining elements of array if they exist
     }
     
     /**

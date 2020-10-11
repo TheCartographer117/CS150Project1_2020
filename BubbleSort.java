@@ -12,38 +12,41 @@ public class BubbleSort implements Sorter {
      * @param  a  an array of ints
      */ 
     public void sort (int[] a) {
-        int n = a.length;
-        for (int i = 0; i< n - 1; i++) {
-            for (int j = 0; j < n -1 - i; j++) {
-                if (a[j+1] < a[j]) 
-                {
-                    int tmp = a[j]; 
-                    a[j] = a[j+1];
-                    a[j+1] = tmp;
+        int pass = 1;
+        boolean exchanges;
+        do {
+            exchanges = false;
+            for (int i = 0; i < a.length-pass; i++) // scan unsorted portion
+                if (a[i] > a[i+1]) {  // if values out of order
+                    int tmp = a[i]; // exchange values
+                    a[i] = a[i+1];
+                    a[i+1] = tmp; 
+                    exchanges = true;
                 }
-            }
-        }
+            pass++;
+        } while (exchanges); //while the array is not sorted
     }
-    
+
     /**
      * Sort an array of comparable objects using bubble sort. 
      *
      * @param  a  an array of comparable objects
      */ 
     public <T extends Comparable<? super T>> void sort (T[] a) {
-        int n = a.length;
-        for (int i = 0; i< n - 1; i++) {
-            for (int j = 0; j < n -1 - i; j++) {
-                if (a[j+1].compareTo(a[j]) < 0) 
-                {
-                    T tmp = a[j]; 
-                    a[j] = a[j+1];
-                    a[j+1] = tmp;
+        int pass = 1;
+        boolean exchanges;
+        do {
+            exchanges = false;
+            for (int i = 0; i < a.length-pass; i++) // scan unsorted portion
+                if (a[i].compareTo(a[i+1]) > 0) { // if values out of order
+                    T tmp = a[i]; // exchange values
+                    a[i] = a[i+1];
+                    a[i+1] = tmp; 
+                    exchanges = true;
                 }
-            }
-        }
+            pass++;
+        } while (exchanges); //while the array is not sorted
     }
-
 
     /**
      * Sort an array of objects using bubble sort. 
@@ -52,19 +55,21 @@ public class BubbleSort implements Sorter {
      * @param  c  a comparator object
      */ 
     public <T> void sort (T[] a, Comparator<T> c) {
-        int n = a.length;
-        for (int i = 0; i< n - 1; i++) {
-            for (int j = 0; j < n -1 - i; j++) {
-                if (c.compare(a[j+1], a[j]) < 0) 
-                {
-                    T tmp = a[j]; 
-                    a[j] = a[j+1];
-                    a[j+1] = tmp;
+        int pass = 1;
+        boolean exchanges;
+        do {
+            exchanges = false;
+            for (int i = 0; i < a.length-pass; i++)  // scan unsorted portion
+                if (c.compare(a[i], a[i+1]) > 0) {  // if values out of order
+                    T tmp = a[i]; // exchange values
+                    a[i] = a[i+1];
+                    a[i+1] = tmp; 
+                    exchanges = true;
                 }
-            }
-        }
+            pass++;
+        } while (exchanges);
     }
-    
+
     /**
      * Return the method of sorting. 
      *
